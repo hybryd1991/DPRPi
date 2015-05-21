@@ -16680,5 +16680,3 @@
 {2015/05/21 08:05:48} Capturing image
 {2015/05/21 08:05:49} Capturing image
 [2015/05/21 08:09:02] Scheduled management tasks. Next at 1432199342
-{2015/05/21 09:08:17} Capturing image
-{2015/05/21 09:11:51} Capturing image

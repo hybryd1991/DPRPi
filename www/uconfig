@@ -1,0 +1,15 @@
+annotation DELAY-PLAY
+anno_background 1
+anno3_custom_background_colour 1
+anno3_custom_background_Y 255
+anno3_custom_text_colour 1
+anno3_custom_text_Y 166
+anno3_custom_text_U 35
+anno3_custom_text_V 190
+video_stabilisation 0
+rotation 270
+raw_layer 0
+video_width 768
+video_height 1280
+image_width 768
+image_height 1280

@@ -10,184 +10,36 @@ mjpegPlayer.isPhotoPlayer = false;
 mjpegPlayer.isVideoContHidden = false;
 mjpegPlayer.isPhotoContHidden = false;
 
-/*mjpegPlayer.Start = function(ip){
-	this.IP = ip;
-	this.initPlayer();
-	setInterval(this.compareSizes, 1000);
-};
-
-mjpegPlayer.initPlayer = function(){
-	$.ajax({
-	  	url: 'modules/getMjpegSize.php',
-	  	dataType: 'json',
-	  	success: function(data){
-
-	    	//ширина, высота и пропорции контейнера
-	    	var surfSizes
-	    	if(mjpegPlayer.isVideoPlayer){
-	    		surfSizes = mjpegPlayer.getVideoPlayerPosition();
-	    	}else if(mjpegPlayer.isPhotoPlayer){
-	    		surfSizes = mjpegPlayer.getPhotoPlayerPosition();
-	    	}else{
-  				surfSizes = mjpegPlayer.getCapturePosition();
-	    	}
-
-  			var surfW = surfSizes.surfW;
-  			var surfH = surfSizes.surfH;
-
-  			var surfProp = surfW/surfH;
-  			//устанавливаем размеры контейнера
-  			$('#mjpegContainer').css('width', surfW+'px');
-  			$('#mjpegContainer').css('height', surfH+'px');
-  			//размеры и пропорции потока
-  			var streamW, streamH;
-	    	mjpegPlayer.mjpegW = data.width;
-	    	mjpegPlayer.mjpegH = data.height;
-
-  			var streamProp = mjpegPlayer.mjpegW/mjpegPlayer.mjpegH;
-
-  			//если поверхность шире потока
-  			if(surfProp <= streamProp){
-  				$('#test-livecam-jpg').css('left', 0+'px');
-  				streamW = surfW;
-  				streamH = streamW/streamProp;
-  				var topPad = (surfH - streamH)/2;
-  				$('#test-livecam-jpg').css('top', topPad+'px');
-  			}else{
-  			//если поверхность выше потока
-  				$('#test-livecam-jpg').css('top', 0+'px');
-  				streamH = surfH;
-  				streamW = streamH*streamProp;
-  				var leftPad = (surfW - streamW)/2;
-  				$('#test-livecam-jpg').css('left', leftPad+'px');
-  			}
-
-  			$('#test-livecam-jpg').css('width', streamW+'px');
-  			$('#test-livecam-jpg').css('height', streamH+'px');
-
-  			var NetavisString = '{"url_mjpeg": "http://'+mjpegPlayer.IP+':8080", "url_jpg": "http://'+mjpegPlayer.IP+':8080", "width": "'+streamW+'", "height": "'+streamH+'", "fullscreen": 0}';
-
-  			$("#test-livecam-jpg").html(NetavisString);
-
-  			LiveCamPage.single = new LiveCamPage();
-			LiveCamPage.single.main();
-	  	}
-	});
-};
-
-mjpegPlayer.compareSizes = function(){
-	$.ajax({
-  		url: 'modules/getMjpegSize.php',
-  		dataType: 'json',
-  		success: function(data){
-    		var newMjpegW = data.width;
-    		var newMjpegH = data.height;
-
-    		if(mjpegPlayer.mjpegW != newMjpegW || mjpegPlayer.mjpegH != newMjpegH)
-				mjpegPlayer.initPlayer(); 		
-    		}
-	});
-};
-
-mjpegPlayer.VideoControlsHide = function(){
-	$('#videoPlayer').animate({ opacity: "0" }, 200);
-	setTimeout("$('#videoPlayer').css('display', 'none')", 200);
-	mjpegPlayer.isVideoContHidden = true;
-}
-mjpegPlayer.VideoControlsShow = function(){
-	$('#videoPlayer').css('display', 'block');
-	$('#videoPlayer').animate({ opacity: "1" }, 200);
-	mjpegPlayer.isVideoContHidden = false;
-}
-
-$(document).ready(function(){
-	$('#test-livecam-jpg').click(function(){	
-		if(mjpegPlayer.isPhotoPlayer){
-			if(mjpegPlayer.photoPlayer.controlsHidden){
-				mjpegPlayer.photoPlayer.controlsShow();
-			}else{
-				mjpegPlayer.photoPlayer.controlsHide();
-			}
-		}
-		if(mjpegPlayer.isVideoPlayer){
-			if(mjpegPlayer.isVideoContHidden){
-				mjpegPlayer.VideoControlsShow();
-				mjpegPlayer.isVideoContHidden = false;
-			}else{
-				mjpegPlayer.VideoControlsHide();
-				mjpegPlayer.isVideoContHidden = true;
-			}
-		}
-	});
-});
-
-mjpegPlayer.getCapturePosition = function(){
-	var surfW = $(window).width();
-  	var surfH = $(window).height() - $('#header').height() - $('#MainBtnBmp').height() - $('#showGalleryBtn').height();
-
-  	var sizes = {};
-  	sizes.surfW = surfW;
-  	sizes.surfH = surfH;
-
-  	return sizes;
-};
-mjpegPlayer.getVideoPlayerPosition = function(){
-	var surfW, surfH;
-	surfW = $(window).width();
-	surfH = $(window).height();
-
-	var sizes = {};
-  	sizes.surfW = surfW;
-  	sizes.surfH = surfH;
-
-  	return sizes;
-}
-mjpegPlayer.getPhotoPlayerPosition = function(){
-	var surfW, surfH;
-	surfW = $(window).width();
-	surfH = $(window).height();
-
-	var sizes = {};
-  	sizes.surfW = surfW;
-  	sizes.surfH = surfH;
-
-  	return sizes;
-}
-
-mjpegPlayer.EnableVideoPlay = function(){
+//ПЛЕЕР ВИДЕО--------------------------------------------------
+var videoPlayer;
+mjpegPlayer.videoPlayer = {};
+mjpegPlayer.videoPlayer.init = function(filename){
 	mjpegPlayer.isVideoPlayer = true;
+	$('#videoPlayerSurface').css('display', 'block');
+	$('#videoPlayerSurface').animate({ opacity: "1" }, "slow");
+	if(videoPlayer)
+		videoPlayer.destroy();
+	videoPlayer = CodoPlayer(filename,
+							{
+								title: "Delay-Play Video",
+				                width: $(window).width(),
+				                height: $(window).height(),
+				                engine: 'auto' / 'html5' / 'flash',
+				                controls: {
+				                    show: 'always',
+				                    hideDelay: 5,
+				                    play: true,
+				                    playBtn: true,
+				                    seek: true,
+				                    volume: 'horizontal',
+				                    fullscreen: false,
+				                    title: true,
+				                    time: true
+				                }
+				            },
+				            "#videoPlayerSurface");
+}
 
-	$('#mjpegContainer').css('position', 'fixed');
-	$('#mjpegContainer').css('top', 0);
-
-	mjpegPlayer.initPlayer();
-	//mjpegPlayer.VideoControlsHide();
-	//$('#mjpeg').css('position', 'static');
-};
-mjpegPlayer.DisableVideoPlay = function(){
-	mjpegPlayer.isVideoPlayer = false;
-	
-	$('#mjpegContainer').css('position', 'static');
-	mjpegPlayer.initPlayer();
-	$('#mjpeg').css('position', 'relative');
-};
-mjpegPlayer.EnablePhotoPlay = function(){
-	mjpegPlayer.isPhotoPlayer = true;
-	
-	$('#mjpegContainer').css('position', 'fixed');
-	$('#mjpegContainer').css('top', 0);
-
-	mjpegPlayer.initPlayer();
-	mjpegPlayer.PhotoControlsHide();
-};
-mjpegPlayer.DisablePhotoPlay = function(){
-	mjpegPlayer.isPhotoPlayer = false;
-	
-	$('#mjpegContainer').css('position', 'static');
-	mjpegPlayer.initPlayer();
-	$('#mjpeg').css('position', 'relative');
-};
-*/
 //ПЛЕЕР ФОТО---------------------------------------------------
 
 mjpegPlayer.photoPlayer = {};
@@ -307,7 +159,6 @@ $(document).ready(function(){
 
 		mjpegPlayer.photoPlayer.init(false,screenId);
 	});
-
 	//отырытие фотоплеера
 	$('.mediaContainer').on('click', '.playScreenLink', function () {
 		$('#screenPlayer').animate({ bottom: "0" }, "slow");
@@ -319,11 +170,6 @@ $(document).ready(function(){
 		$('#screenPlayer').animate({ bottom: "-241" }, "slow");
 		$('#screenPlayerSurface').animate({ opacity: "0" }, "slow");
 		setTimeout("$('#screenPlayerSurface').css('display', 'none')", 1000);
-		/*if(!isMjpeg){
-			ShadowLayerHide();
-		}else{
-			CheckMagicSelect();
-		}*/
 	});
 	//сокрытие элементов управления
 	$('#screenPlayerSurface').click(function(){	
@@ -353,9 +199,16 @@ $(document).ready(function(){
 		mjpegPlayer.photoPlayer.next();
 	});
 
+	//Воспроизведение видео
 	$('.mediaContainer').on('click', '.playVideoLink', function () {
-		var path = $(this).attr('path');
-		//console.log(path);
-		window.open(path,'_blank');
+		var fileName = $(this).attr('path');
+		mjpegPlayer.videoPlayer.init(fileName);
+		$('#videoPlayer').animate({ top: "0" }, "slow");
+	});
+	//закрытие видеоплеера
+	$('.btnVidClose').click(function(){
+		$('#videoPlayer').animate({ top: "-270" }, "slow");
+		$('#videoPlayerSurface').animate({ opacity: "0" }, "slow");
+		setTimeout("$('#videoPlayerSurface').css('display', 'none')", 1000);
 	});
 });

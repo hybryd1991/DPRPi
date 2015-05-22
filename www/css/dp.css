@@ -563,7 +563,7 @@ section.mediaContainer{
 }
 
 /* плеер фото */
-#screenPlayer{
+#screenPlayer, #videoPlayer{
 	min-height: 131px;
 	position: fixed;
 	width: 100%;
@@ -573,7 +573,7 @@ section.mediaContainer{
 	z-index: 3000;
 }
 
-.screenPlayerControls{
+.screenPlayerControls, .videoPlayerControls{
 	top: 0px;
 }
 
@@ -601,11 +601,11 @@ section.mediaContainer{
 	background-repeat: no-repeat;
 	background-position: center center;
 }
-.btnScrLeft:hover, .btnScrLeft:active, .btnScrRight:hover, .btnScrRight:active, .btnScrClose:hover, .btnScrClose:active, .btnConfigClose:hover, .btnConfigClose:active{
+.btnScrLeft:hover, .btnScrLeft:active, .btnScrRight:hover, .btnScrRight:active, .btnScrClose:hover, .btnScrClose:active, .btnConfigClose:hover, .btnConfigClose:active, .btnVidClose:hover, .btnVidClose:active{
 	background-color: #cbd4db;
 }
 
-.btnScrClose, .btnConfigClose{
+.btnScrClose, .btnConfigClose, .btnVidClose{
 	width: 100%;
 	height: 70px;
 	background-color: #a7bdd0;
@@ -621,7 +621,7 @@ section.mediaContainer{
 	position: fixed;
 	bottom: 0px;
 }
-#screenPlayerSurface{
+#screenPlayerSurface, #videoPlayerSurface{
 	width: 100%;
 	height: 100%;
 	background-color: #000;
@@ -646,6 +646,14 @@ section.mediaContainer{
 
 .hideBtns{
 	display: none !important;
+}
+.btnVidClose {
+	margin-top:0px;
+	background-color: rgba(167, 189, 208, 0.5);
+}
+#videoPlayer{
+	top:-70px;
+	height: 70px;
 }
 
 /* мультименю */

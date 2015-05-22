@@ -169,6 +169,7 @@
       <script type="text/javascript" src="js/multiselect.js"></script>
       <script type="text/javascript" src="js/mjpegPlayer.js"></script>
       <script type="text/javascript" src="js/bootstrap-confirmation.js"></script>
+      <script type="text/javascript" src="extras/codoPlayer/CodoPlayer.js"></script>
    </head>
    <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
       <div class="container-fluid" style='padding: 0; margin-bottom: 0px !important' >
@@ -429,6 +430,14 @@
                <div class="btnScrClose">Back</div>
             </div>
          </div>
+         <div id="videoPlayerSurface"></div>
+         <div id="videoPlayer">
+            <div class="videoPlayerWinControls">
+               <div class="btnVidClose">Back</div>
+            </div>
+         </div>
+
+         
        
          <div class="container-fluid text-center hideBtns">
             <div class="panel-group" id="accordion" <?php echo $displayStyle; ?> >

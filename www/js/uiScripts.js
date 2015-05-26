@@ -104,7 +104,7 @@ $(document).ready(function(){
 	$('#footerSelectAction').click(function(){
 		//если ничего не выбрано
 		if(selectedPhotos.length == 0 && selectedVideos.length == 0){
-			alert(locals.mainGui.erNothigSelected);
+			alert('Nothing selected!');
 			return;
 		}
 		//если выбраны только фото
@@ -129,26 +129,26 @@ $(document).ready(function(){
 		//если выбраны только видео
 		if(selectedPhotos.length == 0 && selectedVideos.length != 0){
 			var menuText = '';
-			menuText += '<div class="multiMenuItem" id="miltiVideoMail"><span class="blue">M</span>ail</div>';
-			//menuText += '<div class="multiMenuItem" id="miltiVideoPublish"><span class="blue">О</span>публиковать</div>';
+			menuText += '<div class="multiMenuItem" id="multiVideoMail"><span class="blue">M</span>ail</div>';
+			//menuText += '<div class="multiMenuItem" id="multiVideoPublish"><span class="blue">О</span>публиковать</div>';
 			menuText += '<div class="multiMenuItem" id="multiDelete"><span class="blue">D</span>elete</div>';
 
 			$('#multiMenuContent').html(menuText);
 			$('#multiMenu').animate({ bottom: "0" }, "slow");
-			ShadowLayerShow();
+//			ShadowLayerShow();
 
 			return;
 		}
 		//если выбраны и фото, и видео
 		if(selectedPhotos.length != 0 && selectedVideos.length != 0){
 			var menuText = '';
-			menuText += '<div class="multiMenuItem" id="miltiScreenVideoMail"><span class="blue">M</span>ail</div>';
-			//menuText += '<div class="multiMenuItem" id="miltiScreenVideoPublish><span class="blue">О</span>публиковать</div>';
+			menuText += '<div class="multiMenuItem" id="multiScreenVideoMail"><span class="blue">M</span>ail</div>';
+			//menuText += '<div class="multiMenuItem" id="multiScreenVideoPublish><span class="blue">О</span>публиковать</div>';
 			menuText += '<div class="multiMenuItem" id="multiDelete"><span class="blue">D</span>elete</div>';
 
 			$('#multiMenuContent').html(menuText);
 			$('#multiMenu').animate({ bottom: "0" }, "slow");
-			ShadowLayerShow();
+			//ShadowLayerShow();
 
 			return;
 		}
@@ -156,16 +156,6 @@ $(document).ready(function(){
 	//закрытие мультименю
 	$('#multiMenuCancel').click(function(){
 		$('#multiMenu').animate({ bottom: "-232" }, "slow");
-		ShadowLayerHide();
-	});
-	//удаление всего
-	$('#footerClearAll').click(function(){
-		var data = {};
-		data.action="deleteAll";
-		$.ajax({
-			url: "previews.php",
-			type: "POST",
-			data: data
-		});
+		//ShadowLayerHide();
 	});
 });

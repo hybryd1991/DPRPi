@@ -52,7 +52,6 @@ mjpegPlayer.photoPlayer.controlsHidden = true;
 mjpegPlayer.photoPlayer.init = function(isMulti, index){
 	mjpegPlayer.isPhotoPlayer = true;
 	mjpegPlayer.photoPlayer.photosArray = [];
-	//mjpegPlayer.photoPlayer.createSurf();
 
 	$('.mediaPhoto').each(function(){
 		var screenItem = {};
@@ -78,33 +77,19 @@ mjpegPlayer.photoPlayer.init = function(isMulti, index){
 			}
 		}
 	}
+	$('#screenPlayer').animate({ bottom: "0" }, "slow");
+	$('#screenPlayerSurface').css('display', 'block');
+	$('#screenPlayerSurface').animate({ opacity: "1" }, "slow");
+
+	if(isMulti){
+		$('#multiMenuCancel').trigger('click');
+	}
 
 	mjpegPlayer.photoPlayer.controlsHide();
 
 	mjpegPlayer.photoPlayer.showImage(mjpegPlayer.photoPlayer.activePhoto);
 }
-//подгонка поверхностей
-mjpegPlayer.photoPlayer.createSurf = function(){
-	/*$('#mjpegContainer').css('position', 'fixed');
-	$('#mjpegContainer').css('top', 0);
 
-	var surfW, surfH;
-	surfW = $(window).width();
-	surfH = $(window).height();
-
-	$('#mjpegContainer').css('width', surfW+'px');
-  	$('#mjpegContainer').css('height', surfH+'px');
-
-  	$('#test-livecam-jpg').html('');
-
-  	$('#test-livecam-jpg').css('top', '0px');
-  	$('#test-livecam-jpg').css('left', '0px');
-  	$('#test-livecam-jpg').css('max-width', '');
-  	$('#test-livecam-jpg').css('max-height', '');
-
-	$('#test-livecam-jpg').css('width', surfW+'px');
-  	$('#test-livecam-jpg').css('height', surfH+'px');*/
-}
 //скрытие элементов управления
 mjpegPlayer.photoPlayer.controlsHide = function(){
 	$('#screenPlayer').animate({ opacity: "0" }, 200);
@@ -156,14 +141,12 @@ $(document).ready(function(){
 	//Воспроизведение снимков---------------------------------------------------------------------------------------
 	$('.mediaContainer').on('click', '.playScreenLink', function () {
 		var screenId = $(this).attr("path");
-
 		mjpegPlayer.photoPlayer.init(false,screenId);
 	});
-	//отырытие фотоплеера
-	$('.mediaContainer').on('click', '.playScreenLink', function () {
-		$('#screenPlayer').animate({ bottom: "0" }, "slow");
-		$('#screenPlayerSurface').css('display', 'block');
-		$('#screenPlayerSurface').animate({ opacity: "1" }, "slow");
+	//Воспроизведение снимков мультиселект
+	$('#multiMenuContent').on('click', '#multiScreenPlay', function(){
+		var screenId = $(this).attr("path");
+		mjpegPlayer.photoPlayer.init(true, screenId);
 	});
 	//закрытие фотоплеера
 	$('.btnScrClose').click(function(){

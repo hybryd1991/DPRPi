@@ -16725,3 +16725,116 @@
 {2015/05/22 13:34:45} Add /var/www/media/vi_0002_20150522_133437.mp4 to Box Queue at pos 0
 {2015/05/22 13:34:46} Start boxing /var/www/media/vi_0002_20150522_133437.mp4 from Box Queue at pos 0
 {2015/05/22 13:34:47} Finished boxing /var/www/media/vi_0002_20150522_133437.mp4 from Box Queue at pos 0
+{2015/05/22 13:17:24} RaspiMJPEG Version 5.1.3
+{2015/05/22 13:17:24} MJPEG streaming, ready to receive commands
+[2015/05/26 07:02:09] RaspiCam support started
+[2015/05/26 07:02:09] Capture Pipe already exists /var/www/FIFO1
+[2015/05/26 07:02:09] Scheduler loop is started
+[2015/05/26 07:02:10] New period detected 0
+[2015/05/26 07:02:10] Scheduled management tasks. Next at 1432627330
+{2015/05/26 07:07:30} SIGINT/SIGTERM received, stopping
+{2015/05/26 07:07:51} RaspiMJPEG Version 5.1.3
+{2015/05/26 07:07:51} MJPEG streaming, ready to receive commands
+[2015/05/26 07:08:09] RaspiCam support started
+[2015/05/26 07:08:09] Capture Pipe already exists /var/www/FIFO1
+[2015/05/26 07:08:09] Scheduler loop is started
+[2015/05/26 07:08:10] New period detected 0
+[2015/05/26 07:08:10] Scheduled management tasks. Next at 1432627690
+{2015/05/26 07:11:06} Capturing started
+{2015/05/26 07:11:23} Capturing stopped
+{2015/05/26 07:11:23} Add /var/www/media/vi_0000_20150526_071106.mp4 to Box Queue at pos 0
+{2015/05/26 07:11:23} Start boxing /var/www/media/vi_0000_20150526_071106.mp4 from Box Queue at pos 0
+{2015/05/26 07:11:24} Finished boxing /var/www/media/vi_0000_20150526_071106.mp4 from Box Queue at pos 0
+{2015/05/26 07:16:55} Capturing image
+{2015/05/26 07:28:34} Capturing image
+{2015/05/26 07:28:37} Capturing image
+{2015/05/26 07:46:54} Capturing image
+{2015/05/26 07:46:57} Capturing image
+{2015/05/26 07:47:06} Capturing image
+{2015/05/26 07:56:43} Capturing started
+{2015/05/26 07:56:54} Capturing stopped
+{2015/05/26 07:56:54} Add /var/www/media/vi_0001_20150526_075643.mp4 to Box Queue at pos 1
+{2015/05/26 07:56:55} Start boxing /var/www/media/vi_0001_20150526_075643.mp4 from Box Queue at pos 1
+{2015/05/26 07:56:56} Finished boxing /var/www/media/vi_0001_20150526_075643.mp4 from Box Queue at pos 1
+[2015/05/26 08:08:11] Scheduled management tasks. Next at 1432631291
+{2015/05/26 08:25:18} Capturing image
+{2015/05/26 08:41:36} Capturing image
+{2015/05/26 08:41:37} Capturing image
+{2015/05/26 08:41:39} Capturing image
+[2015/05/26 09:08:12] Scheduled management tasks. Next at 1432634892
+{2015/05/26 09:49:12} Capturing image
+{2015/05/26 09:49:14} Capturing image
+{2015/05/26 09:49:56} Capturing image
+{2015/05/26 09:49:57} Capturing image
+{2015/05/26 09:49:58} Capturing image
+{2015/05/26 09:49:59} Capturing image
+{2015/05/26 09:50:01} Capturing image
+{2015/05/26 09:53:18} Capturing image
+{2015/05/26 09:54:19} Capturing image
+{2015/05/26 09:54:20} Capturing image
+{2015/05/26 09:54:21} Capturing image
+{2015/05/26 09:54:22} Capturing image
+{2015/05/26 09:55:19} Capturing image
+{2015/05/26 09:55:25} Capturing image
+{2015/05/26 09:56:01} Capturing image
+{2015/05/26 09:56:31} Capturing image
+{2015/05/26 09:58:17} Capturing image
+{2015/05/26 09:58:54} Capturing started
+{2015/05/26 09:59:01} Capturing stopped
+{2015/05/26 09:59:01} Add /var/www/media/vi_0002_20150526_095854.mp4 to Box Queue at pos 2
+{2015/05/26 09:59:01} Start boxing /var/www/media/vi_0002_20150526_095854.mp4 from Box Queue at pos 2
+{2015/05/26 09:59:02} Finished boxing /var/www/media/vi_0002_20150526_095854.mp4 from Box Queue at pos 2
+{2015/05/26 10:01:23} Capturing image
+{2015/05/26 10:01:24} Capturing image
+{2015/05/26 10:01:31} Capturing started
+{2015/05/26 10:01:37} Capturing stopped
+{2015/05/26 10:01:37} Add /var/www/media/vi_0003_20150526_100131.mp4 to Box Queue at pos 3
+{2015/05/26 10:01:38} Start boxing /var/www/media/vi_0003_20150526_100131.mp4 from Box Queue at pos 3
+{2015/05/26 10:01:39} Finished boxing /var/www/media/vi_0003_20150526_100131.mp4 from Box Queue at pos 3
+{2015/05/26 10:02:06} Capturing image
+{2015/05/26 10:02:07} Capturing image
+{2015/05/26 10:02:08} Capturing image
+{2015/05/26 10:02:10} Capturing started
+{2015/05/26 10:02:14} Capturing stopped
+{2015/05/26 10:02:14} Add /var/www/media/vi_0004_20150526_100210.mp4 to Box Queue at pos 4
+{2015/05/26 10:02:15} Start boxing /var/www/media/vi_0004_20150526_100210.mp4 from Box Queue at pos 4
+{2015/05/26 10:02:16} Finished boxing /var/www/media/vi_0004_20150526_100210.mp4 from Box Queue at pos 4
+[2015/05/26 10:08:13] Scheduled management tasks. Next at 1432638493
+{2015/05/26 10:14:18} Capturing started
+{2015/05/26 10:14:23} Capturing stopped
+{2015/05/26 10:14:23} Add /var/www/media/vi_0005_20150526_101418.mp4 to Box Queue at pos 5
+{2015/05/26 10:14:23} Start boxing /var/www/media/vi_0005_20150526_101418.mp4 from Box Queue at pos 5
+{2015/05/26 10:14:24} Capturing image
+{2015/05/26 10:14:25} Finished boxing /var/www/media/vi_0005_20150526_101418.mp4 from Box Queue at pos 5
+{2015/05/26 10:14:27} Capturing image
+{2015/05/26 10:14:53} Capturing started
+{2015/05/26 10:14:59} Capturing stopped
+{2015/05/26 10:14:59} Add /var/www/media/vi_0006_20150526_101453.mp4 to Box Queue at pos 6
+{2015/05/26 10:15:00} Start boxing /var/www/media/vi_0006_20150526_101453.mp4 from Box Queue at pos 6
+{2015/05/26 10:15:01} Finished boxing /var/www/media/vi_0006_20150526_101453.mp4 from Box Queue at pos 6
+{2015/05/26 10:25:17} Capturing image
+{2015/05/26 10:57:33} Capturing started
+{2015/05/26 10:57:36} Capturing stopped
+{2015/05/26 10:57:36} Add /var/www/media/vi_0007_20150526_105733.mp4 to Box Queue at pos 7
+{2015/05/26 10:57:36} Start boxing /var/www/media/vi_0007_20150526_105733.mp4 from Box Queue at pos 7
+{2015/05/26 10:57:37} Finished boxing /var/www/media/vi_0007_20150526_105733.mp4 from Box Queue at pos 7
+{2015/05/26 11:07:04} Capturing image
+{2015/05/26 11:07:05} Capturing image
+[2015/05/26 11:08:14] Scheduled management tasks. Next at 1432642094
+{2015/05/26 11:12:04} Capturing started
+{2015/05/26 11:12:09} Capturing stopped
+{2015/05/26 11:12:09} Add /var/www/media/vi_0008_20150526_111204.mp4 to Box Queue at pos 8
+{2015/05/26 11:12:10} Start boxing /var/www/media/vi_0008_20150526_111204.mp4 from Box Queue at pos 8
+{2015/05/26 11:12:11} Finished boxing /var/www/media/vi_0008_20150526_111204.mp4 from Box Queue at pos 8
+[2015/05/26 12:08:15] Scheduled management tasks. Next at 1432645695
+{2015/05/26 12:08:57} Capturing started
+{2015/05/26 12:09:01} Capturing stopped
+{2015/05/26 12:09:01} Add /var/www/media/vi_0009_20150526_120857.mp4 to Box Queue at pos 9
+{2015/05/26 12:09:01} Start boxing /var/www/media/vi_0009_20150526_120857.mp4 from Box Queue at pos 9
+{2015/05/26 12:09:02} Finished boxing /var/www/media/vi_0009_20150526_120857.mp4 from Box Queue at pos 9
+{2015/05/26 12:09:03} Capturing started
+{2015/05/26 12:09:07} Capturing stopped
+{2015/05/26 12:09:07} Add /var/www/media/vi_0010_20150526_120903.mp4 to Box Queue at pos 10
+{2015/05/26 12:09:07} Start boxing /var/www/media/vi_0010_20150526_120903.mp4 from Box Queue at pos 10
+{2015/05/26 12:09:08} Finished boxing /var/www/media/vi_0010_20150526_120903.mp4 from Box Queue at pos 10
+[2015/05/26 13:08:16] Scheduled management tasks. Next at 1432649296

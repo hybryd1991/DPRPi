@@ -421,7 +421,8 @@
 #multiSendPhotoVideoForm h3, 
 #configsForm h3,
 #confStartDelay h4,
-#confRecLength h4{
+#confRecLength h4,
+#multiSendVideoForm h3{
 	font-family: 'cleanvel';
 	text-align: center;
 }
@@ -652,7 +653,7 @@ section.mediaContainer{
 	background-color: rgba(167, 189, 208, 0.5);
 }
 #videoPlayer{
-	top:-70px;
+	top:-170px;
 	height: 70px;
 }
 
@@ -701,4 +702,58 @@ section.mediaContainer{
 .vkGroupAlbums{
 	display: none;
 	padding-left: 40px;
+}
+
+/*mail*/
+.mailSendButtons{
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	height: 70px;
+}
+.mailSendButtons div{
+	background-color: #a7bdd0;
+	width: 50%;
+	height: 70px;
+	color: #fff;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	font-family: 'cleanvel';
+	font-size: 31px;
+	line-height: 76px;
+}
+.mailSendButtons div:active, .mailSendButtons div:hover{
+	background-color: #cbd4db;
+}
+.btnCancelMail{
+	border-right: 2px #fff solid;
+}
+.btnSendMail{
+	border-left: 2px #fff solid;
+}
+.emailNameField,
+.emailRecieverField,
+.emailCommentField{
+	width: 100%;
+	height: 28px;
+}
+
+#screenSenderName.error, 
+#multiScreenSenderName.error, 
+#screenRecieverEmail.error, 
+#multiScreenRecieverEmail.error, 
+#videoSenderName.error, 
+#multiVideoSenderName.error, 
+#videoRecieverEmail.error 
+#multiVideoRecieverEmail.error,
+#multiPhotoVideoSenderName.error,s
+#multiPhotoVideoRecieverEmail.error{
+	background-color: #fcb5b5;
+}
+
+.emailNameField.error,
+.emailRecieverField.error,
+.emailCommentField.error{
+	background-color: #fcb5b5;
 }

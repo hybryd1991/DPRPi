@@ -19,7 +19,7 @@
    $options_ab = array('Off' => '0', 'On' => '1');
    $options_vs = array('Off' => '0', 'On' => '1');
    $options_rl = array('Off' => '0', 'On' => '1');
-
+   
    function initCamPos() {
       $tr = fopen("pipan_bak.txt", "r");
       if($tr){
@@ -30,7 +30,7 @@
          fclose($tr);
       }
    }
-
+   
    function pipan_controls() {
       initCamPos();
       echo "<div class='container-fluid text-center liveimage'>";
@@ -40,7 +40,7 @@
       echo "&nbsp<input type='button' class='btn btn-primary' value='right' onclick='servo_right();'>";
       echo "</div>";   
    }
-  
+   
    function pilight_controls() {
       echo "<tr>";
         echo "<td>Pi-Light:</td>";
@@ -52,7 +52,7 @@
         echo "</td>";
       echo "</tr>";
    }
-
+   
    function getExtraStyles() {
       $files = scandir('css');
       foreach($files as $file) {
@@ -90,7 +90,7 @@
          echo "<option value='$value'$selected>$name</option>";
       }
    }
-
+   
    function makeInput($id, $size, $selKey='') {
       global $config, $debugString;
       if ($selKey == '') $selKey = $id;
@@ -139,11 +139,11 @@
          $mjpegmode = 1;
       }
    }
-
+   
    
    $config = readConfig($config, CONFIG_FILE1);
    $config = readConfig($config, CONFIG_FILE2);
-
+   
    $video_fps = $config['video_fps'];
    $divider = $config['divider'];
    $width = $config['width'];
@@ -157,7 +157,6 @@
       <link href="extras/bootstrap3/css/bootstrap.css" rel="stylesheet" media="screen">
       <link href="extras/bootstrap3/css/bootstrap-theme.css" rel="stylesheet" media="screen">
       <link rel="stylesheet" type="text/css" href="css/dp.css">
-
       <script src="js/jquery-latest.js"></script>
       <script src="js/style_minified.js"></script>
       <script src="js/script.js"></script>
@@ -170,6 +169,8 @@
       <script type="text/javascript" src="js/mjpegPlayer.js"></script>
       <script type="text/javascript" src="js/bootstrap-confirmation.js"></script>
       <script type="text/javascript" src="extras/codoPlayer/CodoPlayer.js"></script>
+      <script type="text/javascript" src="js/delete.js"></script>
+      <script type="text/javascript" src="js/mail.js"></script>
    </head>
    <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
       <div class="container-fluid" style='padding: 0; margin-bottom: 0px !important' >
@@ -197,10 +198,9 @@
             </div>
             <div style="clear:both"></div>
          </section>
-
          <!--
             <input id="toggle_display" type="button" class="btn btn-primary" value="<?php echo $toggleButton; ?>" style="position:absolute;top:60px;right:10px;" onclick="set_display(this.value);">
-         -->
+            -->
          <div class="text-center liveimage">
             <div><img id="mjpeg_dest" <?php if(file_exists("pipan_on")) echo "ontouchstart=\"pipan_start()\""; ?> onclick="toggle_fullscreen(this);" src="/loading.jpg"></div>
             <!-- <div id="main-buttons" <?php echo $displayStyle; ?> >
@@ -209,9 +209,8 @@
                <input id="timelapse_button" type="button" class="btn btn-primary">
                <input id="md_button" type="button" class="btn btn-primary">
                <input id="halt_button" type="button" class="btn btn-danger">
-            </div> -->
+               </div> -->
          </div>
-
          <section id="subGallery">
             <section id="showGalleryBtn">
                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
@@ -244,17 +243,20 @@
          <!-- форма настроек -->
          <div id="configsForm">
             <div class="configFormControls">
-            <h3><span class="blue">C</span>onfiguration</h3>
+               <h3><span class="blue">C</span>onfiguration</h3>
                <table class="table table-striped">
                   <tr>
                      <td>Resolutions:</td>
-                     <td>Load Preset: <select onchange="set_preset(this.value)">
+                     <td>
+                        Load Preset: 
+                        <select onchange="set_preset(this.value)">
                            <option value="1920 1080 25 25 2592 1944">Select option...</option>
                            <option value="1920 1080 25 25 2592 1944">Std FOV</option>
                            <option value="1296 730 25 25 2592 1944">16:9 wide FOV</option>
                            <option value="1296 976 25 25 2592 1944">4:3 full FOV</option>
                            <option value="1920 1080 01 30 2592 1944">Std FOV, x30 Timelapse</option>
-                        </select><br>
+                        </select>
+                        <br>
                         Custom Values:<br>
                         Video res: <?php makeInput('video_width', 4); ?>x<?php makeInput('video_height', 4); ?>px<br>
                         Video fps: <?php makeInput('video_fps', 2); ?>recording, <?php makeInput('MP4Box_fps', 2); ?>boxing<br>
@@ -277,7 +279,8 @@
                   <tr>
                      <td>Buffer (1000... ms), default 0:</td>
                      <td><?php makeInput('video_buffer', 4); ?><input type="button" value="OK" onclick="send_cmd('bu ' + document.getElementById('video_buffer').value)"></td>
-                  </tr>                        <tr>
+                  </tr>
+                  <tr>
                      <td>Sharpness (-100...100), default 0:</td>
                      <td><?php makeInput('sharpness', 4); ?><input type="button" value="OK" onclick="send_cmd('sh ' + document.getElementById('sharpness').value)"></td>
                   </tr>
@@ -357,7 +360,6 @@
                   <tr>
                      <td>Preview quality (0...100) Default 25:<br>Width (128...1024) Default 512:<br>Divider (1-16) Default 1:</td>
                      <td>
-
                         Qu: <?php makeInput('quality', 4); ?>
                         Wi: <?php makeInput('width', 4); ?>
                         Di: <?php makeInput('divider', 4); ?>
@@ -397,18 +399,17 @@
                         y:u:v = <?php makeInput('ac_y', 3, 'anno3_custom_background_Y'); ?>:<?php makeInput('ac_u', 4, 'anno3_custom_background_U'); ?>:<?php makeInput('ac_v', 4, 'anno3_custom_background_V'); ?>
                         <input type="button" value="OK" onclick="set_ac();">
                      </td>
-                     </tr>
+                  </tr>
                   <tr>
                      <td>Watchdog, default interval 3s, errors 3</td>
                      <td>Interval <?php makeInput('watchdog_interval', 3); ?>s&nbsp;&nbsp;&nbsp;&nbsp;Errors <?php makeInput('watchdog_errors', 3); ?>
-                     <input type="button" value="OK" onclick="send_cmd('wd ' + 10 * document.getElementById('watchdog_interval').value + ' ' + document.getElementById('watchdog_errors').value)">
+                        <input type="button" value="OK" onclick="send_cmd('wd ' + 10 * document.getElementById('watchdog_interval').value + ' ' + document.getElementById('watchdog_errors').value)">
                      </td>
                   </tr>
                </table>
                <div class="btnConfigClose">Close</div>
             </div>
          </div>
-
          <div id="secondary-buttons" class="container-fluid text-center hideBtns" <?php echo $displayStyle; ?> >
             <?php  if (file_exists("pipan_on")) pipan_controls(); ?>
             <a href="preview.php" class="btn btn-default">Download Videos and Images</a>
@@ -417,7 +418,6 @@
             &nbsp;&nbsp;
             <a href="schedule.php" class="btn btn-default">Edit schedule settings</a>
          </div>
-
          <!-- плееры -->
          <div id="screenPlayerSurface"></div>
          <div id="screenPlayer">
@@ -436,9 +436,154 @@
                <div class="btnVidClose">Back</div>
             </div>
          </div>
-
-         
-       
+         <!-- формы почты-->
+         <!-- одно фото -->
+         <div id="sendPhotoForm" class="emailForm">
+            <h3><span class="blue">S</span>end photo by E-mail</h3>
+            <hr>
+            <div class="nameForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Your name</span>
+                  <input class="mailInputField emailNameField" id="screenSenderName" type="text" required>
+               </div>
+            </div>
+            <div class="recieverEmailForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <input class="mailInputField emailRecieverField" type="email" id="screenRecieverEmail" type="text" required>
+               </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="mailCommentContainer">
+               <h4>Comment</h4>
+               <textarea style="width:100% !important" class="screenComment emailCommentField" rows="3"></textarea>
+            </div>
+            <div class="mailScreenPreviewContainer">
+               <h4>Photo:</h4>
+               <img style="width:100% !important" id="emailScreen" class="photoToEmail" src="">
+            </div>
+            <div class="mailSendButtons">
+               <div class="btnCancelMail" id="btnCancelScreenMail">Back</div>
+               <div class="btnSendMail" id="btnSendScreenMail">Send</div>
+            </div>
+         </div>
+         <!-- одно видео -->
+         <div id="sendVideoForm" class="emailForm">
+            <h3><span class="blue">S</span>end video by E-mail</h3>
+            <hr>
+            <div class="nameForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Your name</span>
+                  <input class="mailInputField emailNameField" id="videoSenderName" type="text" required>
+               </div>
+            </div>
+            <div class="recieverEmailForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <input class="mailInputField emailRecieverField" type="email" id="videoRecieverEmail" type="text" required>
+               </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="mailCommentContainer">
+               <h4>Comment</h4>
+               <textarea style="width:100% !important" class="videoComment emailCommentField" rows="3"></textarea>
+            </div>
+            <div class="mailVideoPreviewContainer">
+               <h4>Video: <a target="_blank" id="emailVideo" class="videoToEmail" href="">Link</a></h4>
+            </div>
+            <div class="mailSendButtons">
+               <div class="btnCancelMail" id='btnCancelVideoMail'>Back</div>
+               <div class="btnSendMail" id="btnSendVideoMail">Send</div>
+            </div>
+         </div>
+         <!-- несколько фото -->
+         <div id="multiSendPhotoForm" class="emailForm">
+            <h3><span class="blue">S</span>end photos by E-mail</h3>
+            <hr>
+            <div class="nameForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Your name</span>
+                  <input class="mailInputField emailNameField" id="multiScreenSenderName" type="text" required>
+               </div>
+            </div>
+            <div class="recieverEmailForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <input class="mailInputField emailRecieverField" type="email" id="multiScreenRecieverEmail" type="text" required>
+               </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="mailCommentContainer">
+               <h4>Comment</h4>
+               <textarea style="width:100% !important" class="screenComment emailCommentField"  rows="3"></textarea>
+            </div>
+            <div class="mailScreenPreviewContainer">
+               <h4>Photos: </h4>
+               <img style="width:100% !important" id="multiEmailScreen" src="">
+            </div>
+            <div class="mailSendButtons">
+               <div class="btnCancelMail" id="multiBtnCancelScreenMail">Back</div>
+               <div class="btnSendMail" id="multiBtnSendScreenMail">Send</div>
+            </div>
+         </div>
+         <!-- несколько видео -->
+         <div id="multiSendVideoForm" class="emailForm">
+            <h3><span class="blue">S</span>end videos by E-mail</h3>
+            <hr>
+            <div class="nameForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Your name</span>
+                  <input class="mailInputField emailNameField" id="multiVideoSenderName" type="text" required>
+               </div>
+            </div>
+            <div class="recieverEmailForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <input class="mailInputField emailRecieverField" type="email" id="multiVideoRecieverEmail" type="text" required>
+               </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="mailCommentContainer">
+               <h4>Comment</h4>
+               <textarea style="width:100% !important" class="videoComment emailCommentField" rows="3"></textarea>
+            </div>
+            <div class="mailVideoPreviewContainer">
+               <h4>Videos: </h4>
+            </div>
+            <div class="mailSendButtons">
+               <div class="btnCancelMail" id='multiBtnCancelVideoMail'>Back</div>
+               <div class="btnSendMail" id="multiBtnSendVideoMail">Send</div>
+            </div>
+         </div>
+         <!-- фото и видео -->
+         <div id="multiSendPhotoVideoForm" class="emailForm">
+            <h3><span class="blue">S</span>end videos and photos by E-mail</h3>
+            <hr>
+            <div class="nameForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Your name</span>
+                  <input class="mailInputField emailNameField" id="multiPhotoVideoSenderName" type="text" required>
+               </div>
+            </div>
+            <div class="recieverEmailForm">
+               <div class="input-group">
+                  <span class="input-group-addon">Reciever E-mail</span>
+                  <input class="mailInputField emailRecieverField" type="email" id="multiPhotoVideoRecieverEmail" type="text" required>
+               </div>
+            </div>
+            <div style="clear:both"></div>
+            <div class="mailCommentContainer">
+               <h4>Comment</h4>
+               <textarea style="width:100% !important" class="videoComment emailCommentField" rows="3"></textarea>
+            </div>
+            <div class="mailVideoPreviewContainer">
+               <h4>Media: </h4>
+            </div>
+            <div class="mailSendButtons">
+               <div class="btnCancelMail" id='multiBtnCancelPhotoVideoMail'>Back</div>
+               <div class="btnSendMail" id="multiBtnSendPhotoVideoMail">Send</div>
+            </div>
+         </div>
          <div class="container-fluid text-center hideBtns">
             <div class="panel-group" id="accordion" <?php echo $displayStyle; ?> >
                <div class="panel panel-default">
@@ -447,7 +592,6 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Camera Settings</a>
                      </h2>
                   </div>
-                  
                </div>
                <div class="panel panel-default">
                   <div class="panel-heading">
@@ -464,7 +608,7 @@
                         <form action='<?php echo ROOT_PHP; ?>' method='POST'>
                            <br>Style
                            <select name='extrastyle' id='extrastyle'>
-                              <?php getExtraStyles(); ?>
+                           <?php getExtraStyles(); ?>
                            </select>
                            &nbsp;<button type="submit" name="OK" value="OK" >OK</button>
                         </form>

@@ -32,19 +32,23 @@ $(document).ready(function(){
 				//CheckMagicSelect();
 			}else{
 				//если видео
-				var videoIndex = $(this).parent().parent().attr('videoIndex');
-				//проверяем, входит ли элемент в уже выбранные
-				var inSelected = $.inArray(videoIndex, selectedVideos);
-				if(inSelected == -1){
-					//если не входит
-					selectedVideos.push(videoIndex);
-				}else{
-					//если входит
-					selectedVideos.splice(inSelected, 1);
+				var isVideo = $(this).parent().parent().hasClass('mediaVideo');
+				if(isVideo){
+					//если фото
+					var videoIndex = $(this).parent().parent().attr('path');
+					//проверяем, входит ли элемент в уже выбранные
+					var inSelected = $.inArray(videoIndex, selectedVideos);
+					if(inSelected == -1){
+						//если не входит
+						selectedVideos.push(videoIndex);
+					}else{
+						//если входит
+						selectedVideos.splice(inSelected, 1);
+					}
+					//сортируем
+					selectedVideos.sort();
+					//CheckMagicSelect();
 				}
-				//сортируем
-				selectedVideos.sort();
-				//CheckMagicSelect();
 			}
 		}
 	});

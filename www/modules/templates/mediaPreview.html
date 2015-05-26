@@ -2,7 +2,7 @@
 	<div class="mediaBlock {mediaType}" path="{path}">
 	  	<div class="mediaBlockContent">
 	      	<div class="mediaBlockImage">
-	      		<div style="background-image: url({thumbPath})"></div>
+	      		<div class="imageContainer" style="background-image: url({thumbPath})"></div>
 	      		<div class="mediaLabel">{mediaLabel}</div>
 	      		<div class="mediaChecked"></div>
 	      	</div>
@@ -16,7 +16,7 @@
 	      		</div>
 	      		<div class="mediaToggleSeparator"></div>
 	      		<!-- скачать -->
-	      		<div href="{downloadPath}" class="mediaToggledMenu mtmDownload downloadVideoLink" onclick="window.open('{downloadPath}','_blank'); return false;">
+	      		<div class="mediaToggledMenu mtmDownload downloadVideoLink" onclick="window.open('modules/download.php?file={downloadPath}'); return false;">
 	      			<div class="toggleMenuImage">
 	      				<img src="images/toggleMenuDownload.png" alt="">
 	      			</div>
@@ -24,7 +24,7 @@
 	      		</div>
 	      		<div class="mediaToggleSeparator"></div>
 	      		<!-- почта -->
-	      		<div href="{downloadPath}" class="mediaToggledMenu mtmMail mailVideoLink">
+	      		<div href="{downloadPath}" class="mediaToggledMenu mtmMail mailLink">
 	      			<div class="toggleMenuImage">
 	      				<img src="images/toggleMenuMail.png" alt="">
 	      			</div>

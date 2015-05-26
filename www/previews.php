@@ -64,6 +64,7 @@
       return;
    }
    else if (isset($_POST['delete1'])) {
+      //echo 123123;
       deleteFile($_POST['delete1']);
       maintainFolders(MEDIA_PATH, false, false);
    } else if (isset($_POST['convert'])) {
@@ -233,7 +234,7 @@
          $tpl = str_replace('{playLink}', 'playVideoLink', $tpl);
       }
       $tpl = str_replace('{path}', MEDIA_PATH.'/'.$rFile, $tpl);
-      $tpl = str_replace('{downloadPath}', MEDIA_PATH.'/'.$rFile, $tpl);
+      $tpl = str_replace('{downloadPath}', $rFile, $tpl);
       echo $tpl;
 
       /*<img src="images/labelVideo.png" vidindex="{videoIndex}" vid="{downloadPath}" alt="">*/

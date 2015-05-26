@@ -265,9 +265,10 @@
                      </td>
                   </tr>
                   <tr>
-                     <td>Timelapse-Interval (0.1...3200):</td>
-                     <td><?php makeInput('tl_interval', 4); ?>s <input type="button" value="OK" onclick="send_cmd('tv ' + 10 * document.getElementById('tl_interval').value)"></td>
+                     <td>Rotation, default 0:</td>
+                     <td><select onchange="send_cmd('ro ' + this.value)"><?php makeOptions($options_ro, 'rotation'); ?></select></td>
                   </tr>
+                  
                   <tr>
                      <td>Annotation (max 127 characters):</td>
                      <td>
@@ -275,10 +276,22 @@
                         Background: ><select onchange="send_cmd('ab ' + this.value)"><?php makeOptions($options_ab, 'anno_background'); ?></select>
                      </td>
                   </tr>
+                  
+               </table>
+               <a class="btn btn-primary" data-toggle="collapse" href="#additionalCongig" aria-expanded="false" aria-controls="collapseExample" style="width: 100%">
+                  More...
+               </a>
+               <div class="collapse" id="additionalCongig">
+                  <div class="well">
+               <table>
                   <?php if (file_exists("pilight_on")) pilight_controls(); ?>
                   <tr>
                      <td>Buffer (1000... ms), default 0:</td>
                      <td><?php makeInput('video_buffer', 4); ?><input type="button" value="OK" onclick="send_cmd('bu ' + document.getElementById('video_buffer').value)"></td>
+                  </tr>
+                  <tr>
+                     <td>Timelapse-Interval (0.1...3200):</td>
+                     <td><?php makeInput('tl_interval', 4); ?>s <input type="button" value="OK" onclick="send_cmd('tv ' + 10 * document.getElementById('tl_interval').value)"></td>
                   </tr>
                   <tr>
                      <td>Sharpness (-100...100), default 0:</td>
@@ -332,10 +345,7 @@
                         <input type="button" value="OK" onclick="set_ce();">
                      </td>
                   </tr>
-                  <tr>
-                     <td>Rotation, default 0:</td>
-                     <td><select onchange="send_cmd('ro ' + this.value)"><?php makeOptions($options_ro, 'rotation'); ?></select></td>
-                  </tr>
+                  
                   <tr>
                      <td>Flip, default 'none':</td>
                      <td><select onchange="send_cmd('fl ' + this.value)"><?php makeOptions($options_fl, 'flip'); ?></select></td>
@@ -407,6 +417,7 @@
                      </td>
                   </tr>
                </table>
+               </div></div>
                <div class="btnConfigClose">Close</div>
             </div>
          </div>

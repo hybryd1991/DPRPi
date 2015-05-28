@@ -229,9 +229,11 @@
       if($fIcon == ''){
          $tpl = str_replace('{mediaType}', 'mediaPhoto', $tpl);
          $tpl = str_replace('{playLink}', 'playScreenLink', $tpl);
+         $tpl = str_replace('{publishLink}', 'mtmSocialScr', $tpl);
       }else{
          $tpl = str_replace('{mediaType}', 'mediaVideo', $tpl);
          $tpl = str_replace('{playLink}', 'playVideoLink', $tpl);
+         $tpl = str_replace('{publishLink}', 'mtmSocialVid', $tpl);
       }
       $tpl = str_replace('{path}', MEDIA_PATH.'/'.$rFile, $tpl);
       $tpl = str_replace('{downloadPath}', $rFile, $tpl);

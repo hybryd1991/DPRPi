@@ -171,6 +171,8 @@
       <script type="text/javascript" src="extras/codoPlayer/CodoPlayer.js"></script>
       <script type="text/javascript" src="js/delete.js"></script>
       <script type="text/javascript" src="js/mail.js"></script>
+      <script type="text/javascript" src="js/publish.js"></script>
+      <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
    </head>
    <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
       <div class="container-fluid" style='padding: 0; margin-bottom: 0px !important' >
@@ -250,12 +252,16 @@
                      <td>
                         Load Preset: 
                         <select onchange="set_preset(this.value)">
-                           <option value="1920 1080 25 25 2592 1944">Select option...</option>
-                           <option value="1920 1080 25 25 2592 1944">Std FOV</option>
-                           <option value="1296 730 25 25 2592 1944">16:9 wide FOV</option>
-                           <option value="1296 976 25 25 2592 1944">4:3 full FOV</option>
-                           <option value="1920 1080 01 30 2592 1944">Std FOV, x30 Timelapse</option>
+                           <option value="1280 720 25 25 1280 720">1280 x 720</option>
+                           <option value="720 1280 25 25 720 1280">720 x 1280</option>
+                           <option value="1920 1080 25 25 1920 1080">1920 x 1080</option>
+                           <option value="1080 1920 25 25 1080 1920">1080 x 1920</option>
+                           <option value="640 480 25 25 640 480">640 x 480</option>
+                           <option value="480 640 25 25 480 640">480 x 640</option>
+                           <!-- <option value="1296 976 25 25 2592 1944">4:3 full FOV</option>
+                           <option value="1920 1080 01 30 2592 1944">Std FOV, x30 Timelapse</option> -->
                         </select>
+                        <select onchange="send_cmd('ro ' + this.value)"><?php makeOptions($options_ro, 'rotation'); ?></select>
                         <br>
                         Custom Values:<br>
                         Video res: <?php makeInput('video_width', 4); ?>x<?php makeInput('video_height', 4); ?>px<br>
@@ -266,7 +272,7 @@
                   </tr>
                   <tr>
                      <td>Rotation, default 0:</td>
-                     <td><select onchange="send_cmd('ro ' + this.value)"><?php makeOptions($options_ro, 'rotation'); ?></select></td>
+                     <td></td>
                   </tr>
                   
                   <tr>
@@ -595,6 +601,23 @@
                <div class="btnSendMail" id="multiBtnSendPhotoVideoMail">Send</div>
             </div>
          </div>
+         <!-- форма выбора соцсети для публикации -->
+         <div id="selectSocial">
+            <h3>Publication</h3>
+            <hr>
+            <div id="selectSocialContent">
+               <div class="formContent">
+                  <div id="vkShare">
+                     Vkontakte
+                  </div>
+                  <div id="fbShare">
+                     Facebook
+                  </div>
+               </div>
+            </div>
+            <div class="closeSelectSocial">Back</div>
+         </div>
+
          <div class="container-fluid text-center hideBtns">
             <div class="panel-group" id="accordion" <?php echo $displayStyle; ?> >
                <div class="panel panel-default">

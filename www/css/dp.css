@@ -757,3 +757,68 @@ section.mediaContainer{
 .emailCommentField.error{
 	background-color: #fcb5b5;
 }
+
+/* окно выбора соцсети */
+#selectSocial{
+	min-height: 248px;
+	position: fixed;
+	width: 100%;
+	bottom: -248px;
+	border-top: 1px solid #ccc;
+	background-color: #fff;
+	z-index: 3000;
+}
+.closeSelectSocial{
+	background-color: #a7bdd0;
+	width: 100%;
+	height: 70px;
+	color: #fff;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	font-family: 'cleanvel';
+	font-size: 31px;
+	line-height: 76px;
+	margin-top: 20px;
+}
+.closeSelectSocial:active, .closeSelectSocial:hover{
+	background-color: #cbd4db;
+}
+#vkShare > table > tbody > tr > td:nth-child(2) > a > span,
+#fbShare > a{
+	font-family: 'cleanvel' !important;
+	color: #505050 ;
+	font-size: 20px !important;
+}
+
+#selectSocial h3{
+	font-family: 'cleanvel';
+	color: #505050;
+	text-align: center;
+}
+#vkShare{
+	padding: 5px;
+}
+#fbShare{
+	padding: 5px;
+}
+
+#vkShare > table > tbody > tr > td:nth-child(2) > a{
+	color: #505050 !important;
+	text-decoration: none !important;
+}
+#vkShare > table > tbody > tr > td:nth-child(2) > a span{
+	color: #505050 !important;
+	text-decoration: none !important;
+	padding: 0px !important;
+}
+#vkShare > table > tbody > tr > td:nth-child(2) > a > span{
+	position: relative;
+	right: 2px;
+}
+#vkShare > table > tbody > tr > td:nth-child(1){
+	display: none;
+}
+#fbShare > a:hover{
+	text-decoration: none !important;
+}

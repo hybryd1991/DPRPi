@@ -3,7 +3,7 @@
 //
 function toggle_fullscreen(e) {
 
-  var background = document.getElementById("background");
+/*  var background = document.getElementById("background");
 
   if(!background) {
     background = document.createElement("div");
@@ -18,7 +18,7 @@ function toggle_fullscreen(e) {
   else {
     e.className = "fullscreen";
     background.style.display = "block";
-  }
+  }*/
 
 }
 
@@ -187,13 +187,15 @@ ajax_status.onreadystatechange = function() {
   if(ajax_status.readyState == 4 && ajax_status.status == 200) {
 
     if(ajax_status.responseText == "ready") {
-      document.getElementById("MainBtnAvi").className = "";
-      $('#MainBtnAvi > span').html('Video');
-      document.getElementById("MainBtnAvi").value = "record video start";
-      document.getElementById("MainBtnAvi").onclick = function() {send_cmd("ca 1");};
-      document.getElementById("MainBtnBmp").className = "";
-      document.getElementById("MainBtnBmp").value = "record image";
-      document.getElementById("MainBtnBmp").onclick = function() {send_cmd("im");};
+      if(overlay.secsLeft == 0){
+        document.getElementById("MainBtnAvi").className = "";
+        $('#MainBtnAvi > span').html('Video');
+        document.getElementById("MainBtnAvi").value = "record video start";
+        document.getElementById("MainBtnAvi").onclick = function() {send_cmd("ca 1");};
+        document.getElementById("MainBtnBmp").className = "";
+        document.getElementById("MainBtnBmp").value = "record image";
+        document.getElementById("MainBtnBmp").onclick = function() {send_cmd("im");};
+      }
       /*document.getElementById("timelapse_button").disabled = false;
       document.getElementById("timelapse_button").value = "timelapse start";
       document.getElementById("timelapse_button").onclick = function() {send_cmd("tl 1");};
@@ -384,8 +386,20 @@ else {
 }
 
 function send_cmd (cmd) {
-  ajax_cmd.open("GET","cmd_pipe.php?cmd=" + cmd,true);
-  ajax_cmd.send();
+  if(cmd == "im"){
+    var delay = $('#photoDelaySlider').slider( "value" );
+    if(delay == 0){
+      overlay.shadow();
+      ajax_cmd.open("GET","cmd_pipe.php?cmd=" + cmd,true);
+      ajax_cmd.send();
+      return;
+    }
+
+    overlay.count(delay);
+  }else{
+    ajax_cmd.open("GET","cmd_pipe.php?cmd=" + cmd,true);
+    ajax_cmd.send();
+  }
 }
 
 function update_preview_delay() {

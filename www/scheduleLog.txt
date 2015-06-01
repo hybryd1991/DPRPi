@@ -16945,3 +16945,101 @@
 {2015/05/28 12:06:57} Add /var/www/media/vi_0003_20150528_120652.mp4 to Box Queue at pos 3
 {2015/05/28 12:06:58} Start boxing /var/www/media/vi_0003_20150528_120652.mp4 from Box Queue at pos 3
 {2015/05/28 12:06:59} Finished boxing /var/www/media/vi_0003_20150528_120652.mp4 from Box Queue at pos 3
+[2015/05/28 12:50:25] Scheduled management tasks. Next at 1432821025
+[2015/05/28 13:50:26] Scheduled management tasks. Next at 1432824626
+[2015/05/28 14:50:27] Scheduled management tasks. Next at 1432828227
+[2015/05/28 15:50:28] Scheduled management tasks. Next at 1432831828
+[2015/05/28 16:50:29] Scheduled management tasks. Next at 1432835429
+[2015/05/28 17:50:30] Scheduled management tasks. Next at 1432839030
+[2015/05/28 18:50:31] Scheduled management tasks. Next at 1432842631
+[2015/05/28 19:50:32] Scheduled management tasks. Next at 1432846232
+[2015/05/28 20:50:33] Scheduled management tasks. Next at 1432849833
+[2015/05/28 21:50:34] Scheduled management tasks. Next at 1432853434
+[2015/05/28 22:50:35] Scheduled management tasks. Next at 1432857035
+[2015/05/28 23:50:36] Scheduled management tasks. Next at 1432860636
+[2015/05/29 00:50:37] Scheduled management tasks. Next at 1432864237
+[2015/05/29 01:50:38] Scheduled management tasks. Next at 1432867838
+[2015/05/29 02:50:39] Scheduled management tasks. Next at 1432871439
+[2015/05/29 03:50:40] Scheduled management tasks. Next at 1432875040
+[2015/05/29 04:50:41] Scheduled management tasks. Next at 1432878641
+[2015/05/29 05:50:42] Scheduled management tasks. Next at 1432882242
+[2015/05/29 06:50:43] Scheduled management tasks. Next at 1432885843
+[2015/05/29 07:50:44] Scheduled management tasks. Next at 1432889444
+[2015/05/29 08:50:45] Scheduled management tasks. Next at 1432893045
+[2015/05/29 09:50:46] Scheduled management tasks. Next at 1432896646
+[2015/05/29 10:50:47] Scheduled management tasks. Next at 1432900247
+[2015/05/29 11:50:48] Scheduled management tasks. Next at 1432903848
+[2015/05/29 12:50:49] Scheduled management tasks. Next at 1432907449
+[2015/05/29 13:50:50] Scheduled management tasks. Next at 1432911050
+{2015/05/29 13:17:26} RaspiMJPEG Version 5.1.3
+{2015/05/29 13:17:26} MJPEG streaming, ready to receive commands
+[2015/06/01 11:03:44] RaspiCam support started
+[2015/06/01 11:03:44] Capture Pipe already exists /var/www/FIFO1
+[2015/06/01 11:03:44] Scheduler loop is started
+[2015/06/01 11:03:45] New period detected 0
+[2015/06/01 11:03:45] Scheduled management tasks. Next at 1433160225
+{2015/06/01 11:17:07} Capturing image
+{2015/06/01 11:42:07} Capturing image
+{2015/06/01 11:42:08} Capturing started
+{2015/06/01 11:42:10} Capturing stopped
+{2015/06/01 11:42:10} Add /var/www/media/vi_0004_20150601_114208.mp4 to Box Queue at pos 0
+{2015/06/01 11:42:11} Start boxing /var/www/media/vi_0004_20150601_114208.mp4 from Box Queue at pos 0
+{2015/06/01 11:42:11} Capturing image
+{2015/06/01 11:42:12} Finished boxing /var/www/media/vi_0004_20150601_114208.mp4 from Box Queue at pos 0
+{2015/06/01 11:43:49} Capturing image
+{2015/06/01 11:43:52} Capturing image
+[2015/06/01 12:03:46] Scheduled management tasks. Next at 1433163826
+{2015/06/01 12:21:00} Capturing image
+{2015/06/01 12:21:10} Capturing image
+{2015/06/01 12:22:02} Capturing image
+{2015/06/01 12:22:06} Capturing image
+{2015/06/01 12:22:12} Capturing image
+{2015/06/01 12:22:34} Capturing image
+{2015/06/01 12:23:32} Capturing image
+{2015/06/01 12:23:33} Capturing image
+{2015/06/01 12:23:34} Capturing image
+{2015/06/01 12:23:35} Capturing image
+{2015/06/01 12:23:36} Capturing image
+{2015/06/01 12:23:37} Capturing image
+{2015/06/01 12:23:38} Capturing image
+{2015/06/01 12:23:39} Capturing image
+{2015/06/01 12:23:40} Capturing image
+{2015/06/01 12:23:56} Capturing image
+{2015/06/01 12:34:32} Capturing image
+{2015/06/01 12:34:48} Capturing image
+{2015/06/01 12:34:55} Capturing image
+{2015/06/01 12:34:56} Capturing image
+{2015/06/01 12:34:57} Capturing image
+{2015/06/01 12:34:58} Capturing image
+{2015/06/01 12:34:59} Capturing image
+{2015/06/01 12:36:02} Capturing image
+{2015/06/01 12:36:11} Capturing image
+{2015/06/01 12:40:39} Capturing image
+{2015/06/01 12:41:08} Capturing image
+{2015/06/01 12:41:27} Capturing image
+{2015/06/01 12:41:41} Capturing image
+{2015/06/01 12:42:32} Capturing image
+{2015/06/01 12:42:57} Capturing image
+{2015/06/01 12:43:41} Capturing image
+{2015/06/01 12:43:50} Capturing image
+{2015/06/01 12:44:30} Capturing image
+{2015/06/01 12:44:38} Capturing image
+{2015/06/01 12:45:42} Capturing image
+{2015/06/01 12:45:47} Capturing image
+{2015/06/01 12:46:16} Capturing image
+{2015/06/01 12:46:41} Capturing image
+{2015/06/01 12:47:05} Capturing image
+{2015/06/01 12:47:42} Capturing image
+{2015/06/01 12:47:51} Capturing image
+{2015/06/01 12:47:55} Capturing image
+[2015/06/01 13:03:47] Scheduled management tasks. Next at 1433167427
+{2015/06/01 13:12:45} Capturing image
+{2015/06/01 13:12:51} Capturing image
+{2015/06/01 13:14:10} Capturing image
+{2015/06/01 13:14:26} Capturing image
+{2015/06/01 13:14:32} Capturing image
+{2015/06/01 13:14:37} Capturing image
+{2015/06/01 13:14:40} Capturing image
+{2015/06/01 13:14:42} Capturing image
+{2015/06/01 13:16:09} Capturing image
+{2015/06/01 13:16:17} Capturing image

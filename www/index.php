@@ -156,6 +156,7 @@
       <link rel="stylesheet" href="<?php echo getStyle(); ?>" />
       <link href="extras/bootstrap3/css/bootstrap.css" rel="stylesheet" media="screen">
       <link href="extras/bootstrap3/css/bootstrap-theme.css" rel="stylesheet" media="screen">
+      <link href="extras/jqueryUI/jquery-ui.css" rel="stylesheet" media="screen">
       <link rel="stylesheet" type="text/css" href="css/dp.css">
       <script src="js/jquery-latest.js"></script>
       <script src="js/style_minified.js"></script>
@@ -173,6 +174,8 @@
       <script type="text/javascript" src="js/mail.js"></script>
       <script type="text/javascript" src="js/publish.js"></script>
       <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+      <script type="text/javascript" src="js/counter.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.js"></script>
    </head>
    <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
       <div class="container-fluid" style='padding: 0; margin-bottom: 0px !important' >
@@ -282,6 +285,23 @@
                         Background: ><select onchange="send_cmd('ab ' + this.value)"><?php makeOptions($options_ab, 'anno_background'); ?></select>
                      </td>
                   </tr>
+                  <tr>
+                  <td>Delay before photo: <span id="photoDelaySliderVal">3</span></td>
+                  <td>
+                     <div id="photoDelaySlider"></div>
+                     <script type="text/javascript">
+                        $( "#photoDelaySlider" ).slider({
+                           range: "max",
+                           min: 0,
+                           max: 10,
+                           value: 3,
+                           slide: function( event, ui ) {
+                             $( "#photoDelaySliderVal" ).html( ui.value );
+                           }        
+                        });                
+                     </script>
+                     <br><br><br>
+                  </td></tr>
                   
                </table>
                <a class="btn btn-primary" data-toggle="collapse" href="#additionalCongig" aria-expanded="false" aria-controls="collapseExample" style="width: 100%">
@@ -652,6 +672,7 @@
             </div>
          </div>
          <?php if ($debugString != "") echo "$debugString<br>"; ?>
+
       </div>
    </body>
 </html>

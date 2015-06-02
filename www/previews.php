@@ -1,6 +1,7 @@
 <?php
    define('BASE_DIR', dirname(__FILE__));
    require_once(BASE_DIR.'/config.php');
+   require_once($_SERVER['DOCUMENT_ROOT'].'/modules/locals/locals.php');
   
    //Text labels here
    define('BTN_DOWNLOAD', 'Download');
@@ -199,6 +200,8 @@
    
    //function to draw 1 file on the page
    function drawFile($f, $ts, $sel) {
+      global $localizations;
+
       $fType = getFileType($f);
       $rFile = dataFilename($f);
       $fNumber = getFileIndex($f);
@@ -222,10 +225,10 @@
       
       $tpl = str_replace('{thumbPath}', MEDIA_PATH.'/'.$f, $tpl);
       $tpl = str_replace('{mediaLabel}', $fIcon, $tpl);
-      $tpl = str_replace('{stringPlay}', '<span class="blue">P</span>lay', $tpl);
-      $tpl = str_replace('{stringDownload}', '<span class="blue">D</span>ownload', $tpl);
-      $tpl = str_replace('{stringEmail}', '<span class="blue">E</span>-mail', $tpl);
-      $tpl = str_replace('{stringPublish}', '<span class="blue">P</span>ublish', $tpl);
+      $tpl = str_replace('{stringPlay}', $localizations->toggleMenu->play, $tpl);
+      $tpl = str_replace('{stringDownload}', $localizations->toggleMenu->download, $tpl);
+      $tpl = str_replace('{stringEmail}', $localizations->toggleMenu->email, $tpl);
+      $tpl = str_replace('{stringPublish}', $localizations->toggleMenu->publish, $tpl);
       if($fIcon == ''){
          $tpl = str_replace('{mediaType}', 'mediaPhoto', $tpl);
          $tpl = str_replace('{playLink}', 'playScreenLink', $tpl);
@@ -238,23 +241,6 @@
       $tpl = str_replace('{path}', MEDIA_PATH.'/'.$rFile, $tpl);
       $tpl = str_replace('{downloadPath}', $rFile, $tpl);
       echo $tpl;
-
-      /*<img src="images/labelVideo.png" vidindex="{videoIndex}" vid="{downloadPath}" alt="">*/
-
-      /*echo "<fieldset class='fileicon' style='width:" . $fWidth . "px;'>";
-      echo "<legend class='fileicon'>";
-      echo "<button type='submit' name='delete1' value='$f' class='fileicondelete' style='background-image:url(delete.png);
-'></button>";
-      echo "&nbsp;&nbsp;$fNumber&nbsp;";
-      echo "<img src='$fIcon' style='width:24px'/>";
-      echo "<input type='checkbox' name='check_list[]' $sel value='$f' style='float:right;'/>";
-      echo "</legend>";
-      if ($fsz > 0) echo "$fsz Kb $lapseCount"; else echo 'Busy';
-      echo "<br>$fDate<br>$fTime<br>";
-      if ($fsz > 0) echo "<a title='$rFile' href='preview.php?preview=$f'>";
-      echo "<img src='" . MEDIA_PATH . "/$f' style='width:" . $ts . "px'/>";
-      if ($fsz > 0) echo "</a>";
-      echo "</fieldset> ";*/
    }
 ?>
 
@@ -278,16 +264,10 @@
          echo "<video width='" . $previewSize . "px' controls><source src='" . MEDIA_PATH . "/$pFile' type='video/mp4'>Your browser does not support the video tag.</video>";
       }
    }
-/*   echo "<h1>" . TXT_FILES . "&nbsp;&nbsp;";
-   echo "&nbsp;&nbsp;<button class='btn btn-primary' type='submit' name='action' value='selectNone'>" . BTN_SELECTNONE . "</button>";
-   echo "&nbsp;&nbsp;<button class='btn btn-primary' type='submit' name='action' value='selectAll'>" . BTN_SELECTALL . "</button>";
-   echo "&nbsp;&nbsp;<button class='btn btn-primary' type='submit' name='action' value='zipSel'>" . BTN_GETZIP . "</button>";
-   echo "&nbsp;&nbsp;<button class='btn btn-danger' type='submit' name='action' value='deleteSel' onclick=\"return confirm('Are you sure?');\">" . BTN_DELETESEL . "</button>";
-   echo "&nbsp;&nbsp;<button class='btn btn-danger' type='submit' name='action' value='deleteAll' onclick=\"return confirm('Are you sure?');\">" . BTN_DELETEALL . "</button>";
-   echo "</h1>";*/
+
    if ($debugString !="") echo "$debugString<br>";
    $files = scandir(MEDIA_PATH);
-   if(count($files) == 2) echo "<p>No videos/images saved</p>";
+   if(count($files) == 2) echo "<p>".$localizations->mainGui->noMedia."</p>";
    else {
       foreach($files as $file) {
          if(($file != '.') && ($file != '..') && isThumbnail($file, -7)) {
@@ -295,9 +275,6 @@
          } 
       }
    }
-   /*echo "<p><p>" . TXT_PREVIEW . " <input type='text' size='4' name='previewSize' value='$previewSize'>";
-   echo "&nbsp;&nbsp;" . TXT_THUMB . " <input type='text' size='3' name='thumbSize' value='$thumbSize'>";
-   echo "&nbsp;&nbsp;<button class='btn btn-primary' type='submit' name='action' value='updateSizes'>" . BTN_UPDATESIZES . "</button>";*/
 ?>
 </form>
 
@@ -306,12 +283,3 @@
 </form>
 
 </div>
-
-<?php 
-/*if ($zipname) {
-   echo '<script language="javascript">get_zip_progress("' . $zipname . '");</script>';
-} else {
-   echo '<script language="javascript">document.getElementById("progress").style.display="none";</script>';
-}*/
-?>
-

@@ -248,7 +248,7 @@
 	background-color: #fff;
 	font-family: 'cleanvel';
 	text-align: center;
-	overflow-y: scroll; 
+	//overflow-y: scroll; 
 }
 
 #showGalleryBtn{
@@ -354,6 +354,7 @@
 	}
 	section.mediaContainer{
 		padding-bottom: 80px;
+		overflow-y: scroll;
 	}
 }
 @media (max-width: 700px) {

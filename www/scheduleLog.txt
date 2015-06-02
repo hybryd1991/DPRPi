@@ -17043,3 +17043,135 @@
 {2015/06/01 13:14:42} Capturing image
 {2015/06/01 13:16:09} Capturing image
 {2015/06/01 13:16:17} Capturing image
+{2015/06/01 13:53:40} Capturing image
+{2015/06/01 13:53:54} Capturing image
+{2015/06/01 13:54:05} Capturing image
+[2015/06/01 14:03:48] Scheduled management tasks. Next at 1433171028
+[2015/06/01 15:03:49] Scheduled management tasks. Next at 1433174629
+[2015/06/01 16:03:50] Scheduled management tasks. Next at 1433178230
+[2015/06/01 17:03:51] Scheduled management tasks. Next at 1433181831
+[2015/06/01 18:03:52] Scheduled management tasks. Next at 1433185432
+[2015/06/01 19:03:53] Scheduled management tasks. Next at 1433189033
+[2015/06/01 20:03:54] Scheduled management tasks. Next at 1433192634
+[2015/06/01 21:03:55] Scheduled management tasks. Next at 1433196235
+[2015/06/01 22:03:56] Scheduled management tasks. Next at 1433199836
+[2015/06/01 23:03:57] Scheduled management tasks. Next at 1433203437
+[2015/06/02 00:03:58] Scheduled management tasks. Next at 1433207038
+[2015/06/02 01:03:59] Scheduled management tasks. Next at 1433210639
+[2015/06/02 02:04:00] Scheduled management tasks. Next at 1433214240
+[2015/06/02 03:04:01] Scheduled management tasks. Next at 1433217841
+[2015/06/02 04:04:02] Scheduled management tasks. Next at 1433221442
+[2015/06/02 05:04:03] Scheduled management tasks. Next at 1433225043
+[2015/06/02 06:04:04] Scheduled management tasks. Next at 1433228644
+[2015/06/02 07:04:05] Scheduled management tasks. Next at 1433232245
+[2015/06/02 08:04:06] Scheduled management tasks. Next at 1433235846
+{2015/06/02 08:25:35} Capturing image
+{2015/06/02 08:25:39} Capturing image
+{2015/06/02 08:25:43} Capturing image
+{2015/06/02 08:26:02} Capturing image
+{2015/06/02 08:26:11} Capturing image
+{2015/06/02 08:27:00} Capturing image
+{2015/06/02 08:27:17} Capturing image
+{2015/06/02 08:27:22} Capturing image
+{2015/06/02 08:27:30} Capturing image
+{2015/06/02 08:27:35} Capturing image
+{2015/06/02 08:38:16} Capturing image
+{2015/06/02 08:38:21} Capturing image
+{2015/06/02 08:38:21} Capturing started
+{2015/06/02 08:38:34} Capturing stopped
+{2015/06/02 08:38:34} Add /var/www/media/vi_0005_20150602_083821.mp4 to Box Queue at pos 1
+{2015/06/02 08:38:34} Start boxing /var/www/media/vi_0005_20150602_083821.mp4 from Box Queue at pos 1
+{2015/06/02 08:38:35} Finished boxing /var/www/media/vi_0005_20150602_083821.mp4 from Box Queue at pos 1
+[2015/06/02 09:04:07] Scheduled management tasks. Next at 1433239447
+{2015/06/02 09:18:08} Capturing image
+{2015/06/02 09:18:14} Capturing started
+{2015/06/02 09:18:22} Capturing stopped
+{2015/06/02 09:18:22} Add /var/www/media/vi_0006_20150602_091814.mp4 to Box Queue at pos 2
+{2015/06/02 09:18:23} Start boxing /var/www/media/vi_0006_20150602_091814.mp4 from Box Queue at pos 2
+{2015/06/02 09:18:24} Finished boxing /var/www/media/vi_0006_20150602_091814.mp4 from Box Queue at pos 2
+{2015/06/02 09:18:58} Change: rotation = 0
+{2015/06/02 09:19:03} Change: video_width = 1920
+{2015/06/02 09:19:03} Change: video_height = 1080
+{2015/06/02 09:19:03} Change: video_fps = 25
+{2015/06/02 09:19:03} Change: MP4Box_fps = 25
+{2015/06/02 09:19:03} Change: image_width = 1920
+{2015/06/02 09:19:03} Change: image_height = 1080
+{2015/06/02 09:19:05} Change: video_width = 1280
+{2015/06/02 09:19:05} Change: video_height = 720
+{2015/06/02 09:19:05} Change: video_fps = 25
+{2015/06/02 09:19:05} Change: MP4Box_fps = 25
+{2015/06/02 09:19:05} Change: image_width = 1280
+{2015/06/02 09:19:05} Change: image_height = 720
+{2015/06/02 09:19:08} Change: video_width = 1280
+{2015/06/02 09:19:08} Change: video_height = 720
+{2015/06/02 09:19:08} Change: video_fps = 25
+{2015/06/02 09:19:08} Change: MP4Box_fps = 25
+{2015/06/02 09:19:08} Change: image_width = 1280
+{2015/06/02 09:19:08} Change: image_height = 720
+{2015/06/02 09:19:10} Change: video_width = 1280
+{2015/06/02 09:19:10} Change: video_height = 720
+{2015/06/02 09:19:10} Change: video_fps = 25
+{2015/06/02 09:19:10} Change: MP4Box_fps = 25
+{2015/06/02 09:19:10} Change: image_width = 1280
+{2015/06/02 09:19:10} Change: image_height = 720
+{2015/06/02 09:19:12} Change: video_width = 1280
+{2015/06/02 09:19:12} Change: video_height = 720
+{2015/06/02 09:19:12} Change: video_fps = 25
+{2015/06/02 09:19:12} Change: MP4Box_fps = 25
+{2015/06/02 09:19:12} Change: image_width = 1280
+{2015/06/02 09:19:12} Change: image_height = 720
+{2015/06/02 09:19:14} Change: video_width = 1280
+{2015/06/02 09:19:14} Change: video_height = 720
+{2015/06/02 09:19:14} Change: video_fps = 25
+{2015/06/02 09:19:14} Change: MP4Box_fps = 25
+{2015/06/02 09:19:14} Change: image_width = 1280
+{2015/06/02 09:19:14} Change: image_height = 720
+{2015/06/02 09:19:35} Capturing image
+{2015/06/02 09:19:38} Capturing started
+{2015/06/02 09:19:43} Capturing stopped
+{2015/06/02 09:19:43} Add /var/www/media/vi_0000_20150602_091938.mp4 to Box Queue at pos 3
+{2015/06/02 09:19:43} Start boxing /var/www/media/vi_0000_20150602_091938.mp4 from Box Queue at pos 3
+{2015/06/02 09:19:44} Finished boxing /var/www/media/vi_0000_20150602_091938.mp4 from Box Queue at pos 3
+{2015/06/02 09:20:36} Capturing image
+[2015/06/02 10:04:08] Scheduled management tasks. Next at 1433243048
+[2015/06/02 11:04:09] Scheduled management tasks. Next at 1433246649
+[2015/06/02 12:04:10] Scheduled management tasks. Next at 1433250250
+{2015/06/02 12:42:20} Change: video_width = 1280
+{2015/06/02 12:42:20} Change: video_height = 720
+{2015/06/02 12:42:20} Change: video_fps = 25
+{2015/06/02 12:42:20} Change: MP4Box_fps = 25
+{2015/06/02 12:42:20} Change: image_width = 1280
+{2015/06/02 12:42:20} Change: image_height = 720
+{2015/06/02 12:42:22} Change: rotation = 90
+{2015/06/02 12:42:23} Change: video_width = 1280
+{2015/06/02 12:42:23} Change: video_height = 720
+{2015/06/02 12:42:23} Change: video_fps = 25
+{2015/06/02 12:42:23} Change: MP4Box_fps = 25
+{2015/06/02 12:42:23} Change: image_width = 1280
+{2015/06/02 12:42:23} Change: image_height = 720
+{2015/06/02 12:42:33} Capturing image
+{2015/06/02 12:42:46} Change: video_width = 720
+{2015/06/02 12:42:46} Change: video_height = 1280
+{2015/06/02 12:42:46} Change: video_fps = 25
+{2015/06/02 12:42:46} Change: MP4Box_fps = 25
+{2015/06/02 12:42:46} Change: image_width = 720
+{2015/06/02 12:42:46} Change: image_height = 1280
+{2015/06/02 12:42:49} Change: video_width = 720
+{2015/06/02 12:42:49} Change: video_height = 1280
+{2015/06/02 12:42:49} Change: video_fps = 25
+{2015/06/02 12:42:49} Change: MP4Box_fps = 25
+{2015/06/02 12:42:49} Change: image_width = 720
+{2015/06/02 12:42:49} Change: image_height = 1280
+{2015/06/02 13:02:42} Capturing image
+{2015/06/02 13:02:43} Capturing started
+{2015/06/02 13:02:48} Capturing stopped
+{2015/06/02 13:02:48} Add /var/www/media/vi_0000_20150602_130243.mp4 to Box Queue at pos 4
+{2015/06/02 13:02:49} Start boxing /var/www/media/vi_0000_20150602_130243.mp4 from Box Queue at pos 4
+{2015/06/02 13:02:50} Capturing started
+{2015/06/02 13:02:50} Finished boxing /var/www/media/vi_0000_20150602_130243.mp4 from Box Queue at pos 4
+{2015/06/02 13:02:54} Capturing stopped
+{2015/06/02 13:02:54} Add /var/www/media/vi_0001_20150602_130250.mp4 to Box Queue at pos 5
+{2015/06/02 13:02:54} Start boxing /var/www/media/vi_0001_20150602_130250.mp4 from Box Queue at pos 5
+{2015/06/02 13:02:55} Finished boxing /var/www/media/vi_0001_20150602_130250.mp4 from Box Queue at pos 5
+{2015/06/02 13:02:58} Capturing image
+[2015/06/02 13:04:11] Scheduled management tasks. Next at 1433253851

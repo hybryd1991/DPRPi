@@ -1,0 +1,102 @@
+{
+  "helper": {
+    "firstPhoto": "Создайте свою первую фотографию или видео, нажав на одну из этих кнопок!",
+    "itemSubMenu": "Всё записанное медиа отображается в этой области. Нажав на любое превью откроется меню, в которым вы сможете выбрать действия над фото и видео: просмотреть, опубликовать в соцсетях и многое другое!",
+    "bottomMenuSelect": "Также вы можете выбрать сразу несколько элементов и производить действия уже над несколькими выбранными медиа!",
+    "bottomMenuClear": "Чтобы удалить все снятое медиа, нажмите на эту кнопку",
+    "magic": "Вы выбрали фотографии, которые можно склеить! Нажмите на эту кнопку, чтобы склеить изображения, создавать чудесные коллажи с сравнивать разную одежду проще!"
+  },
+  "configs": {
+    "header": "<span class=\"blue\">Н</span>астройки",
+    "startDelay": "Задержка перед записью (сек)",
+    "recLength": "Длительность записи (сек)",
+    "activeCams": "Активные камеры",
+    "allCams": "Все камеры"
+  },
+  "toggleMenu": {
+    "play": "<span class=\"blue\">В</span>оспроизвести",
+    "download": "<span class=\"blue\">С</span>качать",
+    "email": "<span class=\"blue\">О</span>тправить Email",
+    "publish": "<span class=\"blue\">О</span>публиковать"
+  },
+  "selectMenu": {
+    "play": "<span class=\"blue\">В</span>оспроизвести",
+    "mail": "<span class=\"blue\">О</span>тправить по почте",
+    "publish": "<span class=\"blue\">О</span>публиковать",
+    "delete": "<span class=\"blue\">У</span>далить",
+    "compose": "<span class=\"blue\">С</span>клеить"
+  },
+  "buttons": {
+    "doNotSHowHints": "Не показывать подсказки",
+    "back": "Назад",
+    "send": "Отправить",
+    "retry": "Повторить",
+    "newSession": "Начать новую сессию",
+    "start": "Начать",
+    "stop": "Остановить"
+  },
+  "mainGui": {
+    "rec": "<span class=\"blue\">C</span>нять",
+    "photo": "ФОТО",
+    "video": "ВИДЕО",
+    "gallery": "<span class=\"blue\">Г</span>алерея",
+    "select": "<span class=\"blue\">В</span>ыбрать",
+    "clearAll": "<span class=\"blue\">О</span>чистить всё",
+    "withSelected": "<span class=\"blue\">С</span> выбранными",
+    "cancel": "<span class=\"blue\">О</span>тмена",
+    "logout": "<span class=\"blue\">В</span>ыйти",
+    "erNothigSelected": "Ничего не выбрано!",
+    "noMedia": "Нет записынных фото/видео"
+  },
+  "email": {
+    "headerVideo": "<span class=\"blue\">О</span>тправка видео по почте",
+    "headerPhoto": "<span class=\"blue\">О</span>тправка фото по почте",
+    "headerMedia": "<span class=\"blue\">О</span>тправка медиа по почте",
+    "yourName": "Ваше имя",
+    "recieverEmail": "E-mail получателя",
+    "emailComment": "Комментарий к письму",
+    "linkLabelVideo": "Видео для отправки:",
+    "linkLabelPhoto": "Снимок для отправки:",
+    "linkLabelPhotos": "Снимки для отправки:",
+    "linkLabelMedia": "Медиа для отправки:",
+    "link": "Ссылка"
+  },
+  "publish": {
+    "header": "<span class=\"blue\">П</span>оделиться соцсети:",
+    "vk": "ВКонтакте",
+    "fb": "Facebook"
+  },
+  "blank": {
+    "serverOff": "В настоящее время сервер выключен",
+    "sessionEnd": "Ваша сессия завершена </br>Спасибо за пользования системой!",
+    "timeOut": "Истек период бездействия системы",
+    "notFree": "В настоящее время системой пользуется другой пользователь"
+  },
+  "groupMode": {
+    "groupSelect": {
+      "header": "<span class=\"blue\">П</span>роверка авторизации в социальных сетях",
+      "standartComment": "Стандартный заголовок публикации:",
+      "vk": "Вконтакте",
+      "authorized": "Вход выполнен",
+      "notAuthorized": "Вход не выполнен",
+      "alertSelectGroups": "Выберите группы для публикаций!",
+      "alertSelectAlbums": "Выберите альбомы для публикаций!"
+    },
+    "defaultCommentNotSet": "Заголовок по умолчанию не установлен",
+    "publicationComment": "Заголовок публикации: ",
+    "photoPreview": "Предпросмотр фото: ",
+    "groups": "Группы: ",
+    "events": "Мероприятия: "
+  },
+  "loader": {
+    "recVideo": "Запись видео...",
+    "recPhoto": "Снятие снимка...",
+    "openPhoto": "Открытие снимка...",
+    "openPhotoMulti": "Открытие снимков...",
+    "openVideo": "Открытие видео...",
+    "closeVideo": "Закрытие видео...",
+    "closePhoto": "Закрытие снимка...",
+    "clearMedia": "Удаление медиа...",
+    "composePhotos": "Склеивание фото..."
+  }
+}

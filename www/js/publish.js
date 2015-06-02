@@ -58,6 +58,6 @@ $(document).ready(function(){
 	});
 	//закрытие формы выбора социальных сетей для публикации фото
 	$('.closeSelectSocial').click(function(){
-		$('#selectSocial').animate({ bottom: "-248" }, "slow");
+		$('#selectSocial').animate({ bottom: "-258" }, "slow");
 	});
 });

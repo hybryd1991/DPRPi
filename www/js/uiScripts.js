@@ -110,16 +110,16 @@ $(document).ready(function(){
 		//если выбраны только фото
 		if(selectedPhotos.length != 0 && selectedVideos.length == 0){
 			var menuText = '';
-			menuText += '<div class="multiMenuItem" id="multiScreenPlay"><span class="blue">P</span>lay</div>';
+			menuText += '<div class="multiMenuItem" id="multiScreenPlay">'+locals.selectMenu.play+'</div>';
 			if(magicSelect){
-				menuText += '<div class="multiMenuItem" id="multiScreenCompose"><span class="blue">C</span>ompose</div>';
-				menuText += '<div class="multiMenuItem" id="multiScreenMail"><span class="blue">E</span>mail</div>';
-				menuText += '<div class="multiMenuItem" id="multiScreenPublish"><span class="blue">P</span>ublish</div>';
+				menuText += '<div class="multiMenuItem" id="multiScreenCompose">'+locals.selectMenu.compose+'</div>';
+				menuText += '<div class="multiMenuItem" id="multiScreenMail">'+locals.selectMenu.mail+'</div>';
+				menuText += '<div class="multiMenuItem" id="multiScreenPublish">'+locals.selectMenu.publish+'</div>';
 			}else{
-				menuText += '<div class="multiMenuItem" id="multiScreenMail"><span class="blue">E</span>mail</div>';
-				menuText += '<div class="multiMenuItem" id="multiScreenPublish"><span class="blue">P</span>ublish</div>';
+				menuText += '<div class="multiMenuItem" id="multiScreenMail">'+locals.selectMenu.mail+'</div>';
+				menuText += '<div class="multiMenuItem" id="multiScreenPublish">'+locals.selectMenu.publish+'</div>';
 			}
-			menuText += '<div class="multiMenuItem" id="multiDelete"><span class="blue">D</span>elete</div>';
+			menuText += '<div class="multiMenuItem" id="multiDelete">'+locals.selectMenu.delete+'</div>';
 
 			$('#multiMenuContent').html(menuText);
 			$('#multiMenu').animate({ bottom: "0" }, "slow");
@@ -129,9 +129,9 @@ $(document).ready(function(){
 		//если выбраны только видео
 		if(selectedPhotos.length == 0 && selectedVideos.length != 0){
 			var menuText = '';
-			menuText += '<div class="multiMenuItem" id="multiVideoMail"><span class="blue">M</span>ail</div>';
+			menuText += '<div class="multiMenuItem" id="multiVideoMail">'+locals.selectMenu.mail+'</div>';
 			//menuText += '<div class="multiMenuItem" id="multiVideoPublish"><span class="blue">О</span>публиковать</div>';
-			menuText += '<div class="multiMenuItem" id="multiDelete"><span class="blue">D</span>elete</div>';
+			menuText += '<div class="multiMenuItem" id="multiDelete">'+locals.selectMenu.delete+'</div>';
 
 			$('#multiMenuContent').html(menuText);
 			$('#multiMenu').animate({ bottom: "0" }, "slow");
@@ -142,9 +142,9 @@ $(document).ready(function(){
 		//если выбраны и фото, и видео
 		if(selectedPhotos.length != 0 && selectedVideos.length != 0){
 			var menuText = '';
-			menuText += '<div class="multiMenuItem" id="multiScreenVideoMail"><span class="blue">M</span>ail</div>';
+			menuText += '<div class="multiMenuItem" id="multiScreenVideoMail">'+locals.selectMenu.mail+'</div>';
 			//menuText += '<div class="multiMenuItem" id="multiScreenVideoPublish><span class="blue">О</span>публиковать</div>';
-			menuText += '<div class="multiMenuItem" id="multiDelete"><span class="blue">D</span>elete</div>';
+			menuText += '<div class="multiMenuItem" id="multiDelete">'+locals.selectMenu.delete+'</div>';
 
 			$('#multiMenuContent').html(menuText);
 			$('#multiMenu').animate({ bottom: "0" }, "slow");

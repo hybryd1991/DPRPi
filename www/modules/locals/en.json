@@ -1,0 +1,102 @@
+{
+  "helper": {
+    "firstPhoto": "Create your first photo or video clicking one of these buttons!",
+    "itemSubMenu": "You can preview recorded media in this area. Click the media preview and You will see avalable actions: playing, sharing in socials and manu other things!",
+    "bottomMenuSelect": "Also You can select few media items and operate with them all!",
+    "bottomMenuClear": "To delete all recorded media click this button",
+    "magic": "You can compose selected photos! To do this, click the button"
+  },
+  "configs": {
+    "header": "<span class=\"blue\">C</span>apture config",
+    "startDelay": "Delay before recording (sec)",
+    "recLength": "Length of recording (sec)",
+    "activeCams": "Active cams",
+    "allCams": "All cams"
+  },
+  "toggleMenu": {
+    "play": "<span class=\"blue\">P</span>lay",
+    "download": "<span class=\"blue\">D</span>ownload",
+    "email": "<span class=\"blue\">E</span>mail",
+    "publish": "<span class=\"blue\">S</span>hare"
+  },
+  "selectMenu": {
+    "play": "<span class=\"blue\">P</span>lay",
+    "mail": "<span class=\"blue\">E</span>mail",
+    "publish": "<span class=\"blue\">S</span>hare",
+    "delete": "<span class=\"blue\">D</span>elete",
+    "compose": "<span class=\"blue\">C</span>ompose"
+  },
+  "buttons": {
+    "doNotSHowHints": "Do not show hints",
+    "back": "Back",
+    "send": "Send",
+    "retry": "Retry",
+    "newSession": "Start new session",
+    "start": "Start",
+    "stop": "Stop"
+  },
+  "mainGui": {
+    "rec": "<span class=\"blue\">R</span>ecord",
+    "photo": "PHOTO",
+    "video": "VIDEO",
+    "gallery": "<span class=\"blue\">G</span>allery",
+    "select": "<span class=\"blue\">S</span>elect",
+    "clearAll": "<span class=\"blue\">C</span>lear all",
+    "withSelected": "<span class=\"blue\">S</span>elected",
+    "cancel": "<span class=\"blue\">C</span>ancel",
+    "logout": "<span class=\"blue\">L</span>ogout",
+    "erNothigSelected": "Nothing selected!",
+    "noMedia": "No videos/images saved"
+  },
+  "email": {
+    "headerVideo": "<span class=\"blue\">S</span>end video by Email",
+    "headerPhoto": "<span class=\"blue\">S</span>end photo by Email",
+    "headerMedia": "<span class=\"blue\">S</span>end media by Email",
+    "yourName": "Your name",
+    "recieverEmail": "Reciever Email",
+    "emailComment": "Mail comment",
+    "linkLabelVideo": "Video for sending:",
+    "linkLabelPhoto": "Photo for sending:",
+    "linkLabelPhotos": "Photos for sending:",
+    "linkLabelMedia": "Media for sending:",
+    "link": "Link"
+  },
+  "publish": {
+    "header": "<span class=\"blue\">S</span>haring in socials:",
+    "vk": "Vkontakte",
+    "fb": "Facebook"
+  },
+  "blank": {
+    "serverOff": "Server is temporary unavalible",
+    "sessionEnd": "Your session ended </br>Thanks for using our system!",
+    "timeOut": "Waiting timeout expired",
+    "notFree": "Naother user uses system now"
+  },
+  "groupMode": {
+    "groupSelect": {
+      "header": "<span class=\"blue\">S</span>ocials authorization",
+      "standartComment": "Default publication header:",
+      "vk": "Vkontakte",
+      "authorized": "Logged: ",
+      "notAuthorized": "Not authorized. You can login in application settings window",
+      "alertSelectGroups": "Select publishing groups!",
+      "alertSelectAlbums": "Select publishing albums!"
+    },
+    "defaultCommentNotSet": "Default publication header is not defined",
+    "publicationComment": "Publication header: ",
+    "photoPreview": "Photo preview: ",
+    "groups": "Groups: ",
+    "events": "Events: "
+  },
+  "loader": {
+    "recVideo": "Recording video...",
+    "recPhoto": "Recording photo...",
+    "openPhoto": "Opening photo...",
+    "openPhotoMulti": "Opening photos...",
+    "openVideo": "Opening video...",
+    "closeVideo": "Closing video...",
+    "closePhoto": "Closing photo...",
+    "clearMedia": "Deleting media...",
+    "composePhotos": "Composing photos..."
+  }
+}

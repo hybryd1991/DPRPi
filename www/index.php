@@ -2,6 +2,8 @@
 <?php
    define('BASE_DIR', dirname(__FILE__));
    require_once(BASE_DIR.'/config.php');
+   require_once($_SERVER['DOCUMENT_ROOT'].'/modules/locals/locals.php');
+
    $config = array();
    $debugString = "";
    
@@ -147,10 +149,16 @@
    $video_fps = $config['video_fps'];
    $divider = $config['divider'];
    $width = $config['width'];
+
+   //настройки
+   $jsonPath = $_SERVER['DOCUMENT_ROOT'].'/modules/appconfig.json';
+   $configStr = file_get_contents($jsonPath);
+   $appconfig = json_decode($configStr);
    ?>
 <html>
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <title>Delay-Play</title>
       <link rel="stylesheet" href="css/style_minified.css" />
       <link rel="stylesheet" href="<?php echo getStyle(); ?>" />
@@ -158,6 +166,7 @@
       <link href="extras/bootstrap3/css/bootstrap-theme.css" rel="stylesheet" media="screen">
       <link href="extras/jqueryUI/jquery-ui.css" rel="stylesheet" media="screen">
       <link rel="stylesheet" type="text/css" href="css/dp.css">
+
       <script src="js/jquery-latest.js"></script>
       <script src="js/style_minified.js"></script>
       <script src="js/script.js"></script>
@@ -176,50 +185,46 @@
       <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
       <script type="text/javascript" src="js/counter.js"></script>
       <script type="text/javascript" src="js/jquery-ui.js"></script>
+      <script type="text/javascript" src="js/locals.js"></script>
    </head>
    <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
+
+   <script type="text/javascript">
+      var appconfig = JSON.parse('<?echo $configStr?>');
+   </script>
+
       <div class="container-fluid" style='padding: 0; margin-bottom: 0px !important' >
          <section id="header" class="container-fluid">
             <div id="logo" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                <a href="/"><span class="blue">D</span>elay-<span class="blue">P</span>lay</a>
             </div>
             <section id="mainBtnHeader" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-               <span class="blue">R</span>ecord
+               <?=$localizations->mainGui->rec?>
             </section>
             <div id="closeButton" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-               <div id="btnExit">Logout <img src="images/cross.png" alt=""></div>
+               <div id="btnExit"><?=$localizations->mainGui->logout?> <img src="images/cross.png" alt=""></div>
             </div>
             <div style="clear:both"></div>
          </section>
          <section id="mainButtons">
             <div id="MainBtnBmp">
-               <img src="images/mainPhoto.png" alt=""> <span>Photo</span>
+               <img src="images/mainPhoto.png" alt=""> <span><?=$localizations->mainGui->photo?></span>
             </div>
             <div id="MainBtnConf">
                <img src="images/mainConf.png" alt="">
             </div>
             <div id="MainBtnAvi">
-               <img src="images/mainVideo.png" alt=""> <span>Video</span>
+               <img src="images/mainVideo.png" alt=""> <span><?=$localizations->mainGui->video?></span>
             </div>
             <div style="clear:both"></div>
          </section>
-         <!--
-            <input id="toggle_display" type="button" class="btn btn-primary" value="<?php echo $toggleButton; ?>" style="position:absolute;top:60px;right:10px;" onclick="set_display(this.value);">
-            -->
          <div class="text-center liveimage">
             <div><img id="mjpeg_dest" <?php if(file_exists("pipan_on")) echo "ontouchstart=\"pipan_start()\""; ?> onclick="toggle_fullscreen(this);" src="/loading.jpg"></div>
-            <!-- <div id="main-buttons" <?php echo $displayStyle; ?> >
-               <input id="video_button" type="button" class="btn btn-primary">
-               <input id="image_button" type="button" class="btn btn-primary">
-               <input id="timelapse_button" type="button" class="btn btn-primary">
-               <input id="md_button" type="button" class="btn btn-primary">
-               <input id="halt_button" type="button" class="btn btn-danger">
-               </div> -->
          </div>
          <section id="subGallery">
             <section id="showGalleryBtn">
                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-               <span class="blue">G</span>allery
+               <?=$localizations->mainGui->gallery?>
             </section>
             <!-- галерея -->
             <section class="mediaContainer"> 
@@ -228,41 +233,40 @@
          <!-- нижние кнопки -->
          <section id="footerButtons">
             <div class="footerMenuButton" id="footerSelect">
-               <span class="blue">S</span>elect   
+               <?=$localizations->mainGui->select?>
             </div>
             <div class="footerMenuButton clearBtn" id="footerClearAll">
-               <span class="blue">C</span>lear
+               <?=$localizations->mainGui->clearAll?>
             </div>
             <div class="footerMenuButton" id="footerSelectAction">
-               <span class="blue">S</span>elected
+               <?=$localizations->mainGui->withSelected?>
             </div>
             <div class="footerMenuButton" id="footerSelectCancel">
-               <span class="blue">C</span>ancel
+               <?=$localizations->mainGui->cancel?>
             </div>
          </section>
          <!-- меню мультивыбора -->
          <div id="multiMenu">
             <div id="multiMenuContent"></div>
-            <div id="multiMenuCancel">Back</div>
+            <div id="multiMenuCancel"><?=$localizations->buttons->back?></div>
          </div>
          <!-- форма настроек -->
          <div id="configsForm">
             <div class="configFormControls">
-               <h3><span class="blue">C</span>onfiguration</h3>
+               <h3><?=$localizations->configs->header?></h3>
                <table class="table table-striped">
                   <tr>
                      <td>Resolutions:</td>
                      <td>
                         Load Preset: 
                         <select onchange="set_preset(this.value)">
+                           <option value="1280 720 25 25 1280 720">Custom...</option>
                            <option value="1280 720 25 25 1280 720">1280 x 720</option>
                            <option value="720 1280 25 25 720 1280">720 x 1280</option>
                            <option value="1920 1080 25 25 1920 1080">1920 x 1080</option>
                            <option value="1080 1920 25 25 1080 1920">1080 x 1920</option>
                            <option value="640 480 25 25 640 480">640 x 480</option>
                            <option value="480 640 25 25 480 640">480 x 640</option>
-                           <!-- <option value="1296 976 25 25 2592 1944">4:3 full FOV</option>
-                           <option value="1920 1080 01 30 2592 1944">Std FOV, x30 Timelapse</option> -->
                         </select>
                         <select onchange="send_cmd('ro ' + this.value)"><?php makeOptions($options_ro, 'rotation'); ?></select>
                         <br>
@@ -464,166 +468,166 @@
                <div class="clear"></div>
             </div>
             <div class="screenPlayerWinControls">
-               <div class="btnScrClose">Back</div>
+               <div class="btnScrClose"><?=$localizations->buttons->back?></div>
             </div>
          </div>
          <div id="videoPlayerSurface"></div>
          <div id="videoPlayer">
             <div class="videoPlayerWinControls">
-               <div class="btnVidClose">Back</div>
+               <div class="btnVidClose"><?=$localizations->buttons->back?></div>
             </div>
          </div>
          <!-- формы почты-->
          <!-- одно фото -->
          <div id="sendPhotoForm" class="emailForm">
-            <h3><span class="blue">S</span>end photo by E-mail</h3>
+            <h3><?=$localizations->email->headerPhoto?></h3>
             <hr>
             <div class="nameForm">
                <div class="input-group">
-                  <span class="input-group-addon">Your name</span>
+                  <span class="input-group-addon"><?=$localizations->email->yourName?></span>
                   <input class="mailInputField emailNameField" id="screenSenderName" type="text" required>
                </div>
             </div>
             <div class="recieverEmailForm">
                <div class="input-group">
-                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <span class="input-group-addon"><?=$localizations->email->recieverEmail?></span>
                   <input class="mailInputField emailRecieverField" type="email" id="screenRecieverEmail" type="text" required>
                </div>
             </div>
             <div style="clear:both"></div>
             <div class="mailCommentContainer">
-               <h4>Comment</h4>
+               <h4><?=$localizations->email->emailComment?></h4>
                <textarea style="width:100% !important" class="screenComment emailCommentField" rows="3"></textarea>
             </div>
             <div class="mailScreenPreviewContainer">
-               <h4>Photo:</h4>
+               <h4><?=$localizations->email->linkLabelPhoto?></h4>
                <img style="width:100% !important" id="emailScreen" class="photoToEmail" src="">
             </div>
             <div class="mailSendButtons">
-               <div class="btnCancelMail" id="btnCancelScreenMail">Back</div>
-               <div class="btnSendMail" id="btnSendScreenMail">Send</div>
+               <div class="btnCancelMail" id="btnCancelScreenMail"><?=$localizations->buttons->back?></div>
+               <div class="btnSendMail" id="btnSendScreenMail"><?=$localizations->buttons->send?></div>
             </div>
          </div>
          <!-- одно видео -->
          <div id="sendVideoForm" class="emailForm">
-            <h3><span class="blue">S</span>end video by E-mail</h3>
+            <h3><?=$localizations->email->headerVideo?></h3>
             <hr>
             <div class="nameForm">
                <div class="input-group">
-                  <span class="input-group-addon">Your name</span>
+                  <span class="input-group-addon"><?=$localizations->email->yourName?></span>
                   <input class="mailInputField emailNameField" id="videoSenderName" type="text" required>
                </div>
             </div>
             <div class="recieverEmailForm">
                <div class="input-group">
-                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <span class="input-group-addon"><?=$localizations->email->recieverEmail?></span>
                   <input class="mailInputField emailRecieverField" type="email" id="videoRecieverEmail" type="text" required>
                </div>
             </div>
             <div style="clear:both"></div>
             <div class="mailCommentContainer">
-               <h4>Comment</h4>
+               <h4><?=$localizations->email->emailComment?></h4>
                <textarea style="width:100% !important" class="videoComment emailCommentField" rows="3"></textarea>
             </div>
             <div class="mailVideoPreviewContainer">
-               <h4>Video: <a target="_blank" id="emailVideo" class="videoToEmail" href="">Link</a></h4>
+               <h4><?=$localizations->email->linkLabelVideo?> <a target="_blank" id="emailVideo" class="videoToEmail" href="">Link</a></h4>
             </div>
             <div class="mailSendButtons">
-               <div class="btnCancelMail" id='btnCancelVideoMail'>Back</div>
-               <div class="btnSendMail" id="btnSendVideoMail">Send</div>
+               <div class="btnCancelMail" id='btnCancelVideoMail'><?=$localizations->buttons->back?></div>
+               <div class="btnSendMail" id="btnSendVideoMail"><?=$localizations->buttons->send?></div>
             </div>
          </div>
          <!-- несколько фото -->
          <div id="multiSendPhotoForm" class="emailForm">
-            <h3><span class="blue">S</span>end photos by E-mail</h3>
+            <h3><?=$localizations->email->headerPhoto?></h3>
             <hr>
             <div class="nameForm">
                <div class="input-group">
-                  <span class="input-group-addon">Your name</span>
+                  <span class="input-group-addon"><?=$localizations->email->yourName?></span>
                   <input class="mailInputField emailNameField" id="multiScreenSenderName" type="text" required>
                </div>
             </div>
             <div class="recieverEmailForm">
                <div class="input-group">
-                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <span class="input-group-addon"><?=$localizations->email->recieverEmail?></span>
                   <input class="mailInputField emailRecieverField" type="email" id="multiScreenRecieverEmail" type="text" required>
                </div>
             </div>
             <div style="clear:both"></div>
             <div class="mailCommentContainer">
-               <h4>Comment</h4>
+               <h4><?=$localizations->email->emailComment?></h4>
                <textarea style="width:100% !important" class="screenComment emailCommentField"  rows="3"></textarea>
             </div>
             <div class="mailScreenPreviewContainer">
-               <h4>Photos: </h4>
+               <h4><?=$localizations->email->linkLabelPhoto?></h4>
                <img style="width:100% !important" id="multiEmailScreen" src="">
             </div>
             <div class="mailSendButtons">
-               <div class="btnCancelMail" id="multiBtnCancelScreenMail">Back</div>
-               <div class="btnSendMail" id="multiBtnSendScreenMail">Send</div>
+               <div class="btnCancelMail" id="multiBtnCancelScreenMail"><?=$localizations->buttons->back?></div>
+               <div class="btnSendMail" id="multiBtnSendScreenMail"><?=$localizations->buttons->send?></div>
             </div>
          </div>
          <!-- несколько видео -->
          <div id="multiSendVideoForm" class="emailForm">
-            <h3><span class="blue">S</span>end videos by E-mail</h3>
+            <h3><?=$localizations->email->headerVideo?></h3>
             <hr>
             <div class="nameForm">
                <div class="input-group">
-                  <span class="input-group-addon">Your name</span>
+                  <span class="input-group-addon"><?=$localizations->email->yourName?></span>
                   <input class="mailInputField emailNameField" id="multiVideoSenderName" type="text" required>
                </div>
             </div>
             <div class="recieverEmailForm">
                <div class="input-group">
-                  <span class="input-group-addon">Reciever E-Mail</span>
+                  <span class="input-group-addon"><?=$localizations->email->recieverEmail?></span>
                   <input class="mailInputField emailRecieverField" type="email" id="multiVideoRecieverEmail" type="text" required>
                </div>
             </div>
             <div style="clear:both"></div>
             <div class="mailCommentContainer">
-               <h4>Comment</h4>
+               <h4><?=$localizations->email->emailComment?></h4>
                <textarea style="width:100% !important" class="videoComment emailCommentField" rows="3"></textarea>
             </div>
             <div class="mailVideoPreviewContainer">
-               <h4>Videos: </h4>
+               <h4><?=$localizations->email->linkLabelVideo?> </h4>
             </div>
             <div class="mailSendButtons">
-               <div class="btnCancelMail" id='multiBtnCancelVideoMail'>Back</div>
-               <div class="btnSendMail" id="multiBtnSendVideoMail">Send</div>
+               <div class="btnCancelMail" id='multiBtnCancelVideoMail'><?=$localizations->buttons->back?></div>
+               <div class="btnSendMail" id="multiBtnSendVideoMail"><?=$localizations->buttons->send?></div>
             </div>
          </div>
          <!-- фото и видео -->
          <div id="multiSendPhotoVideoForm" class="emailForm">
-            <h3><span class="blue">S</span>end videos and photos by E-mail</h3>
+            <h3><?=$localizations->email->headerMedia?></h3>
             <hr>
             <div class="nameForm">
                <div class="input-group">
-                  <span class="input-group-addon">Your name</span>
+                  <span class="input-group-addon"><?=$localizations->email->yourName?></span>
                   <input class="mailInputField emailNameField" id="multiPhotoVideoSenderName" type="text" required>
                </div>
             </div>
             <div class="recieverEmailForm">
                <div class="input-group">
-                  <span class="input-group-addon">Reciever E-mail</span>
+                  <span class="input-group-addon"><?=$localizations->email->recieverEmail?></span>
                   <input class="mailInputField emailRecieverField" type="email" id="multiPhotoVideoRecieverEmail" type="text" required>
                </div>
             </div>
             <div style="clear:both"></div>
             <div class="mailCommentContainer">
-               <h4>Comment</h4>
+               <h4><?=$localizations->email->emailComment?></h4>
                <textarea style="width:100% !important" class="videoComment emailCommentField" rows="3"></textarea>
             </div>
             <div class="mailVideoPreviewContainer">
-               <h4>Media: </h4>
+               <h4><?=$localizations->email->linkLabelMedia?> </h4>
             </div>
             <div class="mailSendButtons">
-               <div class="btnCancelMail" id='multiBtnCancelPhotoVideoMail'>Back</div>
-               <div class="btnSendMail" id="multiBtnSendPhotoVideoMail">Send</div>
+               <div class="btnCancelMail" id='multiBtnCancelPhotoVideoMail'><?=$localizations->buttons->back?></div>
+               <div class="btnSendMail" id="multiBtnSendPhotoVideoMail"><?=$localizations->buttons->send?></div>
             </div>
          </div>
          <!-- форма выбора соцсети для публикации -->
          <div id="selectSocial">
-            <h3>Publication</h3>
+            <h3><?=$localizations->publish->header?></h3>
             <hr>
             <div id="selectSocialContent">
                <div class="formContent">
@@ -635,7 +639,7 @@
                   </div>
                </div>
             </div>
-            <div class="closeSelectSocial">Back</div>
+            <div class="closeSelectSocial"><?=$localizations->buttons->back?></div>
          </div>
 
          <div class="container-fluid text-center hideBtns">

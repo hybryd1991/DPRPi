@@ -184,12 +184,12 @@ else {
 
 
 ajax_status.onreadystatechange = function() {
+  //console.log(locals);
   if(ajax_status.readyState == 4 && ajax_status.status == 200) {
-
     if(ajax_status.responseText == "ready") {
       if(overlay.secsLeft == 0){
         document.getElementById("MainBtnAvi").className = "";
-        $('#MainBtnAvi > span').html('Video');
+        $('#MainBtnAvi > span').html(locals.mainGui.video);
         document.getElementById("MainBtnAvi").value = "record video start";
         document.getElementById("MainBtnAvi").onclick = function() {send_cmd("ca 1");};
         document.getElementById("MainBtnBmp").className = "";
@@ -210,7 +210,7 @@ ajax_status.onreadystatechange = function() {
     }
     else if(ajax_status.responseText == "md_ready") {
       document.getElementById("MainBtnAvi").className = "btnDisabled";
-      $('#MainBtnAvi > span').html('Video');
+      $('#MainBtnAvi > span').html(locals.mainGui.video);
       document.getElementById("MainBtnAvi").value = "record video start";
       document.getElementById("MainBtnAvi").onclick = function() {};
       document.getElementById("MainBtnBmp").className = "";
@@ -230,7 +230,7 @@ ajax_status.onreadystatechange = function() {
     }
     else if(ajax_status.responseText == "video") {
       document.getElementById("MainBtnAvi").className = "";
-      $('#MainBtnAvi > span').html('Stop');
+      $('#MainBtnAvi > span').html(locals.mainGui.stop);
       document.getElementById("MainBtnAvi").value = "record video stop";
       document.getElementById("MainBtnAvi").onclick = function() {send_cmd("ca 0");};
       document.getElementById("MainBtnBmp").className = "btnDisabled";
@@ -248,7 +248,7 @@ ajax_status.onreadystatechange = function() {
     }
     else if(ajax_status.responseText == "timelapse") {
       document.getElementById("MainBtnAvi").className = "btnDisabled";
-      $('#MainBtnAvi > span').html('Video');
+      $('#MainBtnAvi > span').html(locals.mainGui.video);
       document.getElementById("MainBtnAvi").value = "record video start";
       document.getElementById("MainBtnAvi").onclick = function() {};
       document.getElementById("MainBtnBmp").className = "btnDisabled";
@@ -266,7 +266,7 @@ ajax_status.onreadystatechange = function() {
     }
     else if(ajax_status.responseText == "md_video") {
       document.getElementById("MainBtnAvi").className = "btnDisabled";
-      $('#MainBtnAvi > span').html('Video');
+      $('#MainBtnAvi > span').html(locals.mainGui.video);
       document.getElementById("MainBtnAvi").value = "record video start";
       document.getElementById("MainBtnAvi").onclick = function() {};
       document.getElementById("MainBtnBmp").className = "";
@@ -284,7 +284,7 @@ ajax_status.onreadystatechange = function() {
     }
     else if(ajax_status.responseText == "image") {
       document.getElementById("MainBtnAvi").className = "btnDisabled";
-      $('#MainBtnAvi > span').html('Video');
+      $('#MainBtnAvi > span').html(locals.mainGui.video);
       document.getElementById("MainBtnAvi").value = "record video start";
       document.getElementById("MainBtnAvi").onclick = function() {};
       document.getElementById("MainBtnBmp").className = "btnDisabled";
@@ -302,7 +302,7 @@ ajax_status.onreadystatechange = function() {
     }
     else if(ajax_status.responseText == "halted") {
       document.getElementById("MainBtnAvi").className = "btnDisabled";
-      $('#MainBtnAvi > span').html('Video');
+      $('#MainBtnAvi > span').html(locals.mainGui.video);
       document.getElementById("MainBtnAvi").value = "record video start";
       document.getElementById("MainBtnAvi").onclick = function() {};
       document.getElementById("MainBtnBmp").className = "btnDisabled";

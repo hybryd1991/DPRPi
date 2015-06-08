@@ -33,7 +33,7 @@
     "retry": "Retry",
     "newSession": "Start new session",
     "start": "Start",
-    "stop": "Stop"
+    "stop": "STOP"
   },
   "mainGui": {
     "rec": "<span class=\"blue\">R</span>ecord",
@@ -46,7 +46,8 @@
     "cancel": "<span class=\"blue\">C</span>ancel",
     "logout": "<span class=\"blue\">L</span>ogout",
     "erNothigSelected": "Nothing selected!",
-    "noMedia": "No videos/images saved"
+    "noMedia": "No videos/images saved",
+    "stop": "STOP"
   },
   "email": {
     "headerVideo": "<span class=\"blue\">S</span>end video by Email",

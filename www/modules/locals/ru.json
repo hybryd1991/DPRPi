@@ -46,7 +46,8 @@
     "cancel": "<span class=\"blue\">О</span>тмена",
     "logout": "<span class=\"blue\">В</span>ыйти",
     "erNothigSelected": "Ничего не выбрано!",
-    "noMedia": "Нет записынных фото/видео"
+    "noMedia": "Нет записынных фото/видео",
+    "stop": "СТОП"
   },
   "email": {
     "headerVideo": "<span class=\"blue\">О</span>тправка видео по почте",

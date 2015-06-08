@@ -148,6 +148,9 @@ case "$1" in
           sudo chown www-data:www-data /var/www/$rpicamdir/uconfig
         fi
 
+	echo "Changing permissions"
+	sudo chmod -R 777 /var/www 
+
         echo "Installer finished"
         ;;
 

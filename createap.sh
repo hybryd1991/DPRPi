@@ -2,6 +2,8 @@ sudo apt-get autoremove hostapd
 sudo apt-get autoremove isc-dhcp-server
 sudo apt-get autoremove bind9
 
+chattr -i /etc/resolv.conf
+
 mv /usr/share/dbus-1/system-services/fi.epitest.hostap.WPASupplicant.service~/
 
 wget https://github.com/jenssegers/RTL8188-hostapd/archive/v2.0.tar.gz

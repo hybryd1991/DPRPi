@@ -186,6 +186,7 @@
       <script type="text/javascript" src="js/counter.js"></script>
       <script type="text/javascript" src="js/jquery-ui.js"></script>
       <script type="text/javascript" src="js/locals.js"></script>
+      <script type="text/javascript" src="js/stream_socialAuthorize.js"></script>
    </head>
    <body onload="setTimeout('init(<?php echo "$mjpegmode, $video_fps, $divider" ?>);', 100);">
 
@@ -640,6 +641,120 @@
                </div>
             </div>
             <div class="closeSelectSocial"><?=$localizations->buttons->back?></div>
+         </div>
+
+         <!-- стартовая форма настроек публикации -->
+         <div id="socialAutorize">
+            <h3><?=$localizations->groupMode->groupSelect->header?></h3>
+            <hr>
+            <div id="socialAutorizeBody">
+               <h4><span class="blue">Facebook</span></h4>
+               <div id="facebookAutorizeBody">
+                  
+               </div>
+               <hr>
+               <h4><span class="blue"><?=$localizations->groupMode->groupSelect->vk?></span></h4>
+               <div id="vkAutorizeBody">
+                  <div id="vkGroups">
+                     
+                  </div>
+                  <div id="vkAlbums">
+                     
+                  </div>
+               </div>
+               <hr>
+            </div>
+            <div id="socialMessage">
+               <h4><?=$localizations->groupMode->groupSelect->standartComment?></h4>
+               <textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+            </div>
+            <div id="btnStreamBegin"><?=$localizations->buttons->start?></div>
+         </div>
+         <!-- форма публикации потока -->
+         <div id="selectSocialForm">
+            <h3><?=$localizations->publish->header?></h3>
+            <hr>
+            <div id="socialAutorizeBody">
+               <div class="btnVKSend"><img src="images/icon_vk.png" width="30" alt=""> <?=$localizations->publish->vk?></div>
+               <div class="btnFBSend"><img src="images/icon_fb.png" width="30" alt=""> <?=$localizations->publish->fb?></div>
+            </div>
+            <div id="defSendSocialMessageContainer">
+               <h4><?=$localizations->groupMode->publicationComment?></h4>
+               <span class="socialMessagePrefix"></span>
+               <span class="socialMessageSelf"></span>
+            </div>
+            <div class="sendSocialMessage">
+               <textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+            </div>
+            <h4><?=$localizations->groupMode->photoPreview?></h4>
+            <div id="sendSocialPreview">
+               
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-black" id="btnStreamBegin" data-dismiss="modal"><?=$localizations->buttons->back?></button>
+            </div>
+            <div class="cancelPublic"><?=$localizations->buttons->back?></div>
+         </div>
+         <!-- форма групповой публикации потока -->
+         <div id="selectSocialFormMulti">
+            <h3><?=$localizations->publish->header?></h3>
+            <hr>
+            <div id="socialAutorizeBody">
+               <div class="btnVKSend"><img src="images/icon_vk.png" width="30" alt=""> <?=$localizations->publish->vk?></div>
+               <div class="btnFBSend"><img src="images/icon_fb.png" width="30" alt=""> <?=$localizations->publish->fb?></div>
+            </div>
+            <div id="defSendSocialMessageContainer">
+               <h4><?=$localizations->groupMode->publicationComment?></h4>
+               <span class="socialMessagePrefix"></span>
+               <span class="socialMessageSelf"></span>
+            </div>
+            <div class="sendSocialMessage">
+               <textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+            </div>
+            <h4><?=$localizations->groupMode->photoPreview?></h4>
+            <div id="sendSocialPreview">
+               
+            </div>
+            <div class="modal-footer">
+               <button class="btn btn-black" id="btnStreamBegin" data-dismiss="modal"><?=$localizations->buttons->back?></button>
+            </div>
+            <div class="cancelPublic"><?=$localizations->buttons->back?></div>
+         </div>
+
+         <div id="choseSocialFormContainer">
+            <div id="choseSocialFormModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-body container-fluid">
+                        <h3><?=$localizations->publish->header?></h3>
+                        <hr>
+                        <div id="socialAutorizeBody">
+                           <div class='btnChoseSocialContainer'>
+                              <button class="btn btn-black btnChoseSocial" id="btnFBSend"><?=$localizations->publish->fb?></button>
+                           </div>
+                           <div class='btnChoseSocialContainer'>
+                              <button class="btn btn-black btnChoseSocial" id="btnVKSend"><?=$localizations->publish->vk?></button>
+                           </div>
+                        </div>
+                        <h4><?=$localizations->groupMode->publicationComment?></h4>
+                        <div id="defSendSocialMessageContainer">
+                           <span id="socialMessagePrefix"></span>
+                           <span id="socialMessageSelf"></span>
+                        </div>
+                        <div id="sendSocialMessage">
+                           <textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+                        </div>
+                        <h4><?=$localizations->groupMode->photoPreview?></h4>
+                        <div id="sendSocialPreview">
+                           
+                        </div>
+                        <div class="modal-footer">
+                           <button class="btn btn-black" id="btnStreamBegin" data-dismiss="modal"><?=$localizations->buttons->back?></button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
 
          <div class="container-fluid text-center hideBtns">

@@ -1,0 +1,8 @@
+acl mynetwork {192.168.42.0/24; 127.0.0.1; };
+    options {
+        directory "/var/cache/bind";
+        auth-nxdomain no;
+        forwarders {192.168.42.1; 8.8.8.8; };
+        listen-on-v6 { none; };
+        allow-query { mynetwork; };
+    };

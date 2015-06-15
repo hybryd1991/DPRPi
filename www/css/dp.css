@@ -455,7 +455,7 @@ section.mediaContainer{
 	padding-bottom: 80px;
 }
 .galleryItem{
-	width: 158px;
+	width: 145px;
 	display: inline-block;
 	padding: 5px;
 }
@@ -842,4 +842,74 @@ section.mediaContainer{
 
 #photoDelaySlider{
 	z-index: 0;
+}
+
+#socialAutorize, 
+#selectSocialForm,
+#selectSocialFormMulti{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	display: none;
+	z-index: 4000;
+	background-color: #fff;
+	font-family: 'cleanvel';
+}
+#socialAutorize h3, #socialAutorize h3, #selectSocialForm h3, #selectSocialFormMulti h3{
+	font-family: 'cleanvel';
+	text-align: center;
+}
+#socialAutorizeBody, #socialMessage{
+	padding: 20px;
+}
+#socialAutorizeBody{
+	padding-bottom: 0px;
+}
+#socialMessage{
+	padding-top: 0px;
+	margin-bottom: 70px !important;
+	padding-bottom: 70px !important;
+}
+#btnStreamBegin, .cancelPublic{
+	width: 100%;
+	background-color: #a7bdd0;
+	color: #fff;
+	font-family: 'cleanvel';
+	position: fixed;
+	bottom: 0px;
+	min-height: 70px;
+	font-size: 45px;
+	line-height: 70px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+	z-index: 9999;
+}
+#selectSocialForm > #socialAutorizeBody div,
+#selectSocialFormMulti > #socialAutorizeBody div{
+	width: 100%;
+	background-color: #a7bdd0;
+	color: #fff;
+	font-family: 'cleanvel';
+	min-height: 40px;
+	font-size: 45px;
+	line-height: 70px;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+#selectSocialForm > #socialAutorizeBody div:active, 
+#selectSocialForm > #socialAutorizeBody div:hover,
+#selectSocialFormMulti > #socialAutorizeBody div:active, 
+#selectSocialFormMulti > #socialAutorizeBody div:hover{
+	background-color: #cbd4db;
+}
+
+#defSendSocialMessageContainer, 
+.sendSocialMessage, 
+#selectSocialForm > h4,
+#selectSocialFormMulti > h4{
+	padding-left: 20px;
+	padding-right: 20px;
 }

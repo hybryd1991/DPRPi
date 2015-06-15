@@ -17198,3 +17198,366 @@
 [2015/06/08 12:04:53] Scheduled management tasks. Next at 1433768693
 {2015/06/08 13:00:25} SIGINT/SIGTERM received, stopping
 [2015/06/08 13:04:54] Scheduled management tasks. Next at 1433772294
+[2015/06/08 14:04:55] Scheduled management tasks. Next at 1433775895
+[2015/06/08 15:04:56] Scheduled management tasks. Next at 1433779496
+[2015/06/08 16:04:57] Scheduled management tasks. Next at 1433783097
+[2015/06/08 17:04:58] Scheduled management tasks. Next at 1433786698
+[2015/06/08 18:04:59] Scheduled management tasks. Next at 1433790299
+[2015/06/08 19:05:00] Scheduled management tasks. Next at 1433793900
+[2015/06/08 20:05:01] Scheduled management tasks. Next at 1433797501
+[2015/06/08 21:05:02] Scheduled management tasks. Next at 1433801102
+[2015/06/08 22:05:03] Scheduled management tasks. Next at 1433804703
+[2015/06/08 23:05:04] Scheduled management tasks. Next at 1433808304
+[2015/06/09 00:05:05] Scheduled management tasks. Next at 1433811905
+[2015/06/09 01:05:06] Scheduled management tasks. Next at 1433815506
+[2015/06/09 02:05:07] Scheduled management tasks. Next at 1433819107
+[2015/06/09 03:05:08] Scheduled management tasks. Next at 1433822708
+[2015/06/09 04:05:09] Scheduled management tasks. Next at 1433826309
+[2015/06/09 05:05:10] Scheduled management tasks. Next at 1433829910
+[2015/06/09 06:05:11] Scheduled management tasks. Next at 1433833511
+[2015/06/09 07:05:12] Scheduled management tasks. Next at 1433837112
+[2015/06/09 08:05:13] Scheduled management tasks. Next at 1433840713
+{2015/06/09 08:17:25} RaspiMJPEG Version 5.1.3
+{2015/06/09 08:17:25} MJPEG streaming, ready to receive commands
+[2015/06/09 10:33:52] RaspiCam support started
+[2015/06/09 10:33:52] Capture Pipe already exists /var/www/FIFO1
+[2015/06/09 10:33:52] Scheduler loop is started
+[2015/06/09 10:33:53] New period detected 0
+[2015/06/09 10:33:53] Scheduled management tasks. Next at 1433849633
+{2015/06/09 10:34:55} Capturing image
+{2015/06/09 10:34:58} Capturing started
+{2015/06/09 10:35:05} Capturing stopped
+{2015/06/09 10:35:05} Add /var/www/media/vi_0000_20150609_103458.mp4 to Box Queue at pos 0
+{2015/06/09 10:35:06} Start boxing /var/www/media/vi_0000_20150609_103458.mp4 from Box Queue at pos 0
+{2015/06/09 10:35:07} Finished boxing /var/www/media/vi_0000_20150609_103458.mp4 from Box Queue at pos 0
+[2015/06/09 11:33:54] Scheduled management tasks. Next at 1433853234
+{2015/06/09 11:55:51} Capturing image
+{2015/06/09 11:56:03} Capturing started
+{2015/06/09 11:56:08} Capturing stopped
+{2015/06/09 11:56:08} Add /var/www/media/vi_0001_20150609_115603.mp4 to Box Queue at pos 1
+{2015/06/09 11:56:08} Start boxing /var/www/media/vi_0001_20150609_115603.mp4 from Box Queue at pos 1
+{2015/06/09 11:56:09} Finished boxing /var/www/media/vi_0001_20150609_115603.mp4 from Box Queue at pos 1
+{2015/06/09 11:56:19} Capturing started
+{2015/06/09 11:56:24} Capturing stopped
+{2015/06/09 11:56:24} Add /var/www/media/vi_0002_20150609_115619.mp4 to Box Queue at pos 2
+{2015/06/09 11:56:25} Start boxing /var/www/media/vi_0002_20150609_115619.mp4 from Box Queue at pos 2
+{2015/06/09 11:56:26} Finished boxing /var/www/media/vi_0002_20150609_115619.mp4 from Box Queue at pos 2
+{2015/06/09 11:58:53} Capturing image
+{2015/06/09 11:17:22} RaspiMJPEG Version 5.1.3
+{2015/06/09 11:17:22} MJPEG streaming, ready to receive commands
+[2015/06/09 12:00:03] RaspiCam support started
+[2015/06/09 12:00:03] Capture Pipe already exists /var/www/FIFO1
+[2015/06/09 12:00:03] Scheduler loop is started
+[2015/06/09 12:00:04] New period detected 0
+[2015/06/09 12:00:04] Scheduled management tasks. Next at 1433854804
+{2015/06/09 12:01:51} Capturing image
+{2015/06/09 12:02:13} Capturing started
+{2015/06/09 12:02:21} Capturing stopped
+{2015/06/09 12:02:21} Add /var/www/media/vi_0000_20150609_120212.mp4 to Box Queue at pos 0
+{2015/06/09 12:02:22} Start boxing /var/www/media/vi_0000_20150609_120212.mp4 from Box Queue at pos 0
+{2015/06/09 12:02:23} Finished boxing /var/www/media/vi_0000_20150609_120212.mp4 from Box Queue at pos 0
+{2015/06/09 12:02:42} Capturing started
+{2015/06/09 12:02:48} Capturing stopped
+{2015/06/09 12:02:48} Add /var/www/media/vi_0001_20150609_120242.mp4 to Box Queue at pos 1
+{2015/06/09 12:02:48} Start boxing /var/www/media/vi_0001_20150609_120242.mp4 from Box Queue at pos 1
+{2015/06/09 12:02:50} Finished boxing /var/www/media/vi_0001_20150609_120242.mp4 from Box Queue at pos 1
+{2015/06/09 12:02:58} Capturing image
+{2015/06/09 12:03:04} Capturing image
+{2015/06/09 12:06:14} Capturing image
+{2015/06/09 12:07:03} Capturing image
+{2015/06/09 12:07:06} Capturing image
+{2015/06/09 12:07:08} Capturing started
+{2015/06/09 12:07:11} Capturing stopped
+{2015/06/09 12:07:11} Add /var/www/media/vi_0002_20150609_120708.mp4 to Box Queue at pos 2
+{2015/06/09 12:07:11} Start boxing /var/www/media/vi_0002_20150609_120708.mp4 from Box Queue at pos 2
+{2015/06/09 12:07:12} Finished boxing /var/www/media/vi_0002_20150609_120708.mp4 from Box Queue at pos 2
+{2015/06/09 12:11:40} Capturing image
+{2015/06/09 12:22:04} Capturing image
+{2015/06/09 12:23:47} Capturing started
+{2015/06/09 12:23:52} Capturing stopped
+{2015/06/09 12:23:52} Add /var/www/media/vi_0003_20150609_122347.mp4 to Box Queue at pos 3
+{2015/06/09 12:23:53} Start boxing /var/www/media/vi_0003_20150609_122347.mp4 from Box Queue at pos 3
+{2015/06/09 12:23:54} Finished boxing /var/www/media/vi_0003_20150609_122347.mp4 from Box Queue at pos 3
+{2015/06/09 12:27:48} Capturing image
+{2015/06/09 12:35:14} Change: annotation = DELAY-PLAY
+{2015/06/09 12:35:19} Change: video_width = 480
+{2015/06/09 12:35:19} Change: video_height = 640
+{2015/06/09 12:35:19} Change: video_fps = 25
+{2015/06/09 12:35:19} Change: MP4Box_fps = 25
+{2015/06/09 12:35:19} Change: image_width = 480
+{2015/06/09 12:35:19} Change: image_height = 640
+{2015/06/09 12:35:24} Change: video_width = 480
+{2015/06/09 12:35:24} Change: video_height = 640
+{2015/06/09 12:35:24} Change: video_fps = 25
+{2015/06/09 12:35:24} Change: MP4Box_fps = 25
+{2015/06/09 12:35:24} Change: image_width = 480
+{2015/06/09 12:35:24} Change: image_height = 640
+{2015/06/09 12:35:34} Capturing started
+{2015/06/09 12:35:37} Capturing stopped
+{2015/06/09 12:35:37} Add /var/www/media/vi_0000_20150609_123534.mp4 to Box Queue at pos 4
+{2015/06/09 12:35:38} Start boxing /var/www/media/vi_0000_20150609_123534.mp4 from Box Queue at pos 4
+{2015/06/09 12:35:39} Finished boxing /var/www/media/vi_0000_20150609_123534.mp4 from Box Queue at pos 4
+{2015/06/09 12:36:10} Capturing image
+{2015/06/09 12:36:24} Capturing started
+{2015/06/09 12:36:30} Capturing stopped
+{2015/06/09 12:36:30} Add /var/www/media/vi_0001_20150609_123624.mp4 to Box Queue at pos 5
+{2015/06/09 12:36:31} Start boxing /var/www/media/vi_0001_20150609_123624.mp4 from Box Queue at pos 5
+{2015/06/09 12:36:32} Finished boxing /var/www/media/vi_0001_20150609_123624.mp4 from Box Queue at pos 5
+{2015/06/09 12:39:28} Capturing image
+{2015/06/09 12:40:21} Capturing image
+{2015/06/09 12:41:11} Capturing image
+{2015/06/09 12:41:15} Capturing started
+{2015/06/09 12:41:18} Capturing stopped
+{2015/06/09 12:41:18} Add /var/www/media/vi_0002_20150609_124115.mp4 to Box Queue at pos 6
+{2015/06/09 12:41:19} Start boxing /var/www/media/vi_0002_20150609_124115.mp4 from Box Queue at pos 6
+{2015/06/09 12:41:20} Finished boxing /var/www/media/vi_0002_20150609_124115.mp4 from Box Queue at pos 6
+{2015/06/09 12:50:05} Capturing image
+{2015/06/09 12:56:40} Capturing image
+[2015/06/09 13:00:05] Scheduled management tasks. Next at 1433858405
+{2015/06/09 13:25:47} Capturing image
+{2015/06/09 13:26:00} Capturing image
+[2015/06/09 14:00:06] Scheduled management tasks. Next at 1433862006
+[2015/06/09 15:00:07] Scheduled management tasks. Next at 1433865607
+[2015/06/09 16:00:08] Scheduled management tasks. Next at 1433869208
+[2015/06/09 17:00:09] Scheduled management tasks. Next at 1433872809
+{2015/06/09 17:57:23} Capturing image
+[2015/06/09 18:00:10] Scheduled management tasks. Next at 1433876410
+{2015/06/09 18:17:24} RaspiMJPEG Version 5.1.3
+{2015/06/09 18:17:24} MJPEG streaming, ready to receive commands
+[2015/06/09 18:17:28] RaspiCam support started
+[2015/06/09 18:17:29] Capture Pipe already exists /var/www/FIFO1
+[2015/06/09 18:17:29] Scheduler loop is started
+[2015/06/09 18:17:30] New period detected 0
+[2015/06/09 18:17:30] Scheduled management tasks. Next at 1433877450
+[2015/06/10 07:47:17] Scheduled management tasks. Next at 1433926037
+[2015/06/10 08:47:18] Scheduled management tasks. Next at 1433929638
+{2015/06/10 08:17:23} RaspiMJPEG Version 5.1.3
+{2015/06/10 08:17:24} MJPEG streaming, ready to receive commands
+[2015/06/10 08:17:28] RaspiCam support started
+[2015/06/10 08:17:28] Capture Pipe already exists /var/www/FIFO1
+[2015/06/10 08:17:28] Scheduler loop is started
+[2015/06/10 08:17:29] New period detected 0
+[2015/06/10 08:17:29] Scheduled management tasks. Next at 1433927849
+{2015/06/10 09:09:46} Capturing image
+{2015/06/10 09:09:51} Capturing image
+{2015/06/10 09:09:53} Capturing started
+{2015/06/10 09:09:56} Capturing stopped
+{2015/06/10 09:09:56} Add /var/www/media/vi_0000_20150610_090953.mp4 to Box Queue at pos 0
+{2015/06/10 09:09:57} Start boxing /var/www/media/vi_0000_20150610_090953.mp4 from Box Queue at pos 0
+{2015/06/10 09:09:58} Finished boxing /var/www/media/vi_0000_20150610_090953.mp4 from Box Queue at pos 0
+{2015/06/10 09:11:34} Capturing image
+{2015/06/10 09:11:38} Capturing image
+{2015/06/10 09:11:58} Capturing image
+[2015/06/10 09:17:30] Scheduled management tasks. Next at 1433931450
+[2015/06/10 10:17:31] Scheduled management tasks. Next at 1433935051
+[2015/06/10 11:17:32] Scheduled management tasks. Next at 1433938652
+[2015/06/10 12:17:33] Scheduled management tasks. Next at 1433942253
+[2015/06/10 13:17:34] Scheduled management tasks. Next at 1433945854
+[2015/06/10 14:17:35] Scheduled management tasks. Next at 1433949455
+[2015/06/10 15:17:36] Scheduled management tasks. Next at 1433953056
+[2015/06/10 16:17:37] Scheduled management tasks. Next at 1433956657
+[2015/06/10 17:17:38] Scheduled management tasks. Next at 1433960258
+[2015/06/10 18:17:39] Scheduled management tasks. Next at 1433963859
+[2015/06/10 19:17:40] Scheduled management tasks. Next at 1433967460
+[2015/06/10 20:17:41] Scheduled management tasks. Next at 1433971061
+[2015/06/10 21:17:42] Scheduled management tasks. Next at 1433974662
+[2015/06/10 22:17:43] Scheduled management tasks. Next at 1433978263
+[2015/06/10 23:17:44] Scheduled management tasks. Next at 1433981864
+[2015/06/11 00:17:45] Scheduled management tasks. Next at 1433985465
+[2015/06/11 01:17:46] Scheduled management tasks. Next at 1433989066
+[2015/06/11 02:17:47] Scheduled management tasks. Next at 1433992667
+[2015/06/11 03:17:48] Scheduled management tasks. Next at 1433996268
+[2015/06/11 04:17:49] Scheduled management tasks. Next at 1433999869
+[2015/06/11 05:17:50] Scheduled management tasks. Next at 1434003470
+[2015/06/11 06:17:51] Scheduled management tasks. Next at 1434007071
+[2015/06/11 07:17:52] Scheduled management tasks. Next at 1434010672
+{2015/06/11 07:18:09} SIGINT/SIGTERM received, stopping
+{2015/06/11 07:18:29} RaspiMJPEG Version 5.1.3
+{2015/06/11 07:18:29} MJPEG streaming, ready to receive commands
+[2015/06/11 07:18:51] RaspiCam support started
+[2015/06/11 07:18:51] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 07:18:51] Scheduler loop is started
+[2015/06/11 07:18:52] New period detected 0
+[2015/06/11 07:18:52] Scheduled management tasks. Next at 1434010732
+{2015/06/11 07:39:19} SIGINT/SIGTERM received, stopping
+{2015/06/11 07:39:37} RaspiMJPEG Version 5.1.3
+{2015/06/11 07:39:38} MJPEG streaming, ready to receive commands
+[2015/06/11 07:40:00] RaspiCam support started
+[2015/06/11 07:40:01] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 07:40:01] Scheduler loop is started
+[2015/06/11 07:40:02] New period detected 0
+[2015/06/11 07:40:02] Scheduled management tasks. Next at 1434012002
+[2015/06/11 08:40:03] Scheduled management tasks. Next at 1434015603
+{2015/06/11 08:50:10} SIGINT/SIGTERM received, stopping
+{2015/06/11 08:50:29} RaspiMJPEG Version 5.1.3
+{2015/06/11 08:50:30} MJPEG streaming, ready to receive commands
+[2015/06/11 08:50:49] RaspiCam support started
+[2015/06/11 08:50:49] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 08:50:49] Scheduler loop is started
+[2015/06/11 08:50:50] New period detected 0
+[2015/06/11 08:50:50] Scheduled management tasks. Next at 1434016250
+{2015/06/11 09:07:19} SIGINT/SIGTERM received, stopping
+{2015/06/11 09:07:37} RaspiMJPEG Version 5.1.3
+{2015/06/11 09:07:38} MJPEG streaming, ready to receive commands
+[2015/06/11 09:07:56] RaspiCam support started
+[2015/06/11 09:07:56] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 09:07:56] Scheduler loop is started
+[2015/06/11 09:07:57] New period detected 0
+[2015/06/11 09:07:57] Scheduled management tasks. Next at 1434017277
+{2015/06/11 09:22:25} SIGINT/SIGTERM received, stopping
+{2015/06/11 09:22:45} RaspiMJPEG Version 5.1.3
+{2015/06/11 09:22:45} MJPEG streaming, ready to receive commands
+[2015/06/11 09:23:05] RaspiCam support started
+[2015/06/11 09:23:06] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 09:23:06] Scheduler loop is started
+[2015/06/11 09:23:07] New period detected 0
+[2015/06/11 09:23:07] Scheduled management tasks. Next at 1434018187
+{2015/06/11 09:59:53} Capturing image
+[2015/06/11 10:23:08] Scheduled management tasks. Next at 1434021788
+{2015/06/11 10:26:57} Capturing image
+{2015/06/11 10:55:17} SIGINT/SIGTERM received, stopping
+{2015/06/11 10:55:37} RaspiMJPEG Version 5.1.3
+{2015/06/11 10:55:56} MJPEG streaming, ready to receive commands
+[2015/06/11 10:56:00] RaspiCam support started
+[2015/06/11 10:56:00] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 10:56:00] Scheduler loop is started
+[2015/06/11 10:56:01] New period detected 0
+[2015/06/11 10:56:01] Scheduled management tasks. Next at 1434023761
+{2015/06/11 11:17:12} SIGINT/SIGTERM received, stopping
+{2015/06/11 11:17:32} RaspiMJPEG Version 5.1.3
+{2015/06/11 11:17:48} MJPEG streaming, ready to receive commands
+[2015/06/11 11:17:52] RaspiCam support started
+[2015/06/11 11:17:52] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 11:17:52] Scheduler loop is started
+[2015/06/11 11:17:53] New period detected 0
+[2015/06/11 11:17:53] Scheduled management tasks. Next at 1434025073
+{2015/06/11 11:19:54} SIGINT/SIGTERM received, stopping
+{2015/06/11 11:20:15} RaspiMJPEG Version 5.1.3
+{2015/06/11 11:20:15} MJPEG streaming, ready to receive commands
+[2015/06/11 11:20:35] RaspiCam support started
+[2015/06/11 11:20:35] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 11:20:35] Scheduler loop is started
+[2015/06/11 11:20:36] New period detected 0
+[2015/06/11 11:20:36] Scheduled management tasks. Next at 1434025236
+[2015/06/11 12:20:37] Scheduled management tasks. Next at 1434028837
+{2015/06/11 12:28:31} SIGINT/SIGTERM received, stopping
+{2015/06/11 12:28:51} RaspiMJPEG Version 5.1.3
+{2015/06/11 12:29:08} MJPEG streaming, ready to receive commands
+[2015/06/11 12:29:12] RaspiCam support started
+[2015/06/11 12:29:12] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 12:29:12] Scheduler loop is started
+[2015/06/11 12:29:13] New period detected 0
+[2015/06/11 12:29:13] Scheduled management tasks. Next at 1434029353
+{2015/06/11 12:43:55} SIGINT/SIGTERM received, stopping
+{2015/06/11 12:44:14} RaspiMJPEG Version 5.1.3
+{2015/06/11 12:44:14} MJPEG streaming, ready to receive commands
+[2015/06/11 12:44:32] RaspiCam support started
+[2015/06/11 12:44:32] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 12:44:32] Scheduler loop is started
+[2015/06/11 12:44:33] New period detected 0
+[2015/06/11 12:44:33] Scheduled management tasks. Next at 1434030273
+{2015/06/11 12:46:37} SIGINT/SIGTERM received, stopping
+{2015/06/11 12:46:56} RaspiMJPEG Version 5.1.3
+{2015/06/11 12:46:56} MJPEG streaming, ready to receive commands
+[2015/06/11 12:47:15] RaspiCam support started
+[2015/06/11 12:47:15] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 12:47:15] Scheduler loop is started
+[2015/06/11 12:47:16] New period detected 0
+[2015/06/11 12:47:16] Scheduled management tasks. Next at 1434030436
+{2015/06/11 13:09:53} SIGINT/SIGTERM received, stopping
+{2015/06/11 13:10:07} RaspiMJPEG Version 5.1.3
+{2015/06/11 13:10:08} MJPEG streaming, ready to receive commands
+[2015/06/11 13:10:12] RaspiCam support started
+[2015/06/11 13:10:12] Capture Pipe already exists /var/www/FIFO1
+[2015/06/11 13:10:12] Scheduler loop is started
+[2015/06/11 13:10:13] New period detected 0
+[2015/06/11 13:10:13] Scheduled management tasks. Next at 1434031813
+[2015/06/11 14:10:14] Scheduled management tasks. Next at 1434035414
+[2015/06/11 15:10:15] Scheduled management tasks. Next at 1434039015
+[2015/06/11 16:10:16] Scheduled management tasks. Next at 1434042616
+[2015/06/11 17:10:17] Scheduled management tasks. Next at 1434046217
+[2015/06/11 18:10:18] Scheduled management tasks. Next at 1434049818
+[2015/06/11 19:10:19] Scheduled management tasks. Next at 1434053419
+[2015/06/11 20:10:20] Scheduled management tasks. Next at 1434057020
+[2015/06/11 21:10:21] Scheduled management tasks. Next at 1434060621
+[2015/06/11 22:10:22] Scheduled management tasks. Next at 1434064222
+[2015/06/11 23:10:23] Scheduled management tasks. Next at 1434067823
+[2015/06/12 00:10:24] Scheduled management tasks. Next at 1434071424
+[2015/06/12 01:10:25] Scheduled management tasks. Next at 1434075025
+[2015/06/12 02:10:26] Scheduled management tasks. Next at 1434078626
+[2015/06/12 03:10:27] Scheduled management tasks. Next at 1434082227
+[2015/06/12 04:10:28] Scheduled management tasks. Next at 1434085828
+[2015/06/12 05:10:29] Scheduled management tasks. Next at 1434089429
+[2015/06/12 06:10:30] Scheduled management tasks. Next at 1434093030
+[2015/06/12 07:10:31] Scheduled management tasks. Next at 1434096631
+[2015/06/12 08:10:32] Scheduled management tasks. Next at 1434100232
+[2015/06/12 09:10:33] Scheduled management tasks. Next at 1434103833
+[2015/06/12 10:10:34] Scheduled management tasks. Next at 1434107434
+[2015/06/12 11:10:35] Scheduled management tasks. Next at 1434111035
+[2015/06/12 12:10:36] Scheduled management tasks. Next at 1434114636
+[2015/06/12 13:10:37] Scheduled management tasks. Next at 1434118237
+[2015/06/12 14:10:38] Scheduled management tasks. Next at 1434121838
+[2015/06/12 15:10:39] Scheduled management tasks. Next at 1434125439
+[2015/06/12 16:10:40] Scheduled management tasks. Next at 1434129040
+[2015/06/12 17:10:41] Scheduled management tasks. Next at 1434132641
+[2015/06/12 18:10:42] Scheduled management tasks. Next at 1434136242
+[2015/06/12 19:10:43] Scheduled management tasks. Next at 1434139843
+[2015/06/12 20:10:44] Scheduled management tasks. Next at 1434143444
+[2015/06/12 21:10:45] Scheduled management tasks. Next at 1434147045
+[2015/06/12 22:10:46] Scheduled management tasks. Next at 1434150646
+[2015/06/12 23:10:47] Scheduled management tasks. Next at 1434154247
+[2015/06/13 00:10:48] Scheduled management tasks. Next at 1434157848
+[2015/06/13 01:10:49] Scheduled management tasks. Next at 1434161449
+[2015/06/13 02:10:50] Scheduled management tasks. Next at 1434165050
+[2015/06/13 03:10:51] Scheduled management tasks. Next at 1434168651
+[2015/06/13 04:10:52] Scheduled management tasks. Next at 1434172252
+[2015/06/13 05:10:53] Scheduled management tasks. Next at 1434175853
+[2015/06/13 06:10:54] Scheduled management tasks. Next at 1434179454
+[2015/06/13 07:10:55] Scheduled management tasks. Next at 1434183055
+[2015/06/13 08:10:56] Scheduled management tasks. Next at 1434186656
+[2015/06/13 09:10:57] Scheduled management tasks. Next at 1434190257
+[2015/06/13 10:10:58] Scheduled management tasks. Next at 1434193858
+[2015/06/13 11:10:59] Scheduled management tasks. Next at 1434197459
+[2015/06/13 12:11:00] Scheduled management tasks. Next at 1434201060
+[2015/06/13 13:11:01] Scheduled management tasks. Next at 1434204661
+[2015/06/13 14:11:02] Scheduled management tasks. Next at 1434208262
+[2015/06/13 15:11:03] Scheduled management tasks. Next at 1434211863
+[2015/06/13 16:11:04] Scheduled management tasks. Next at 1434215464
+[2015/06/13 17:11:05] Scheduled management tasks. Next at 1434219065
+[2015/06/13 18:11:06] Scheduled management tasks. Next at 1434222666
+[2015/06/13 19:11:07] Scheduled management tasks. Next at 1434226267
+[2015/06/13 20:11:08] Scheduled management tasks. Next at 1434229868
+[2015/06/13 21:11:09] Scheduled management tasks. Next at 1434233469
+[2015/06/13 22:11:10] Scheduled management tasks. Next at 1434237070
+[2015/06/13 23:11:11] Scheduled management tasks. Next at 1434240671
+[2015/06/14 00:11:12] Scheduled management tasks. Next at 1434244272
+[2015/06/14 01:11:13] Scheduled management tasks. Next at 1434247873
+[2015/06/14 02:11:14] Scheduled management tasks. Next at 1434251474
+[2015/06/14 03:11:15] Scheduled management tasks. Next at 1434255075
+[2015/06/14 04:11:16] Scheduled management tasks. Next at 1434258676
+[2015/06/14 05:11:17] Scheduled management tasks. Next at 1434262277
+[2015/06/14 06:11:18] Scheduled management tasks. Next at 1434265878
+[2015/06/14 07:11:19] Scheduled management tasks. Next at 1434269479
+[2015/06/14 08:11:20] Scheduled management tasks. Next at 1434273080
+[2015/06/14 09:11:21] Scheduled management tasks. Next at 1434276681
+[2015/06/14 10:11:22] Scheduled management tasks. Next at 1434280282
+[2015/06/14 11:11:23] Scheduled management tasks. Next at 1434283883
+[2015/06/14 12:11:24] Scheduled management tasks. Next at 1434287484
+[2015/06/14 13:11:25] Scheduled management tasks. Next at 1434291085
+[2015/06/14 14:11:26] Scheduled management tasks. Next at 1434294686
+[2015/06/14 15:11:27] Scheduled management tasks. Next at 1434298287
+[2015/06/14 16:11:28] Scheduled management tasks. Next at 1434301888
+[2015/06/14 17:11:29] Scheduled management tasks. Next at 1434305489
+[2015/06/14 18:11:30] Scheduled management tasks. Next at 1434309090
+[2015/06/14 19:11:31] Scheduled management tasks. Next at 1434312691
+[2015/06/14 20:11:32] Scheduled management tasks. Next at 1434316292
+[2015/06/14 21:11:33] Scheduled management tasks. Next at 1434319893
+[2015/06/14 22:11:34] Scheduled management tasks. Next at 1434323494
+[2015/06/14 23:11:35] Scheduled management tasks. Next at 1434327095
+[2015/06/15 00:11:36] Scheduled management tasks. Next at 1434330696
+[2015/06/15 01:11:37] Scheduled management tasks. Next at 1434334297
+[2015/06/15 02:11:38] Scheduled management tasks. Next at 1434337898
+[2015/06/15 03:11:39] Scheduled management tasks. Next at 1434341499
+[2015/06/15 04:11:40] Scheduled management tasks. Next at 1434345100
+[2015/06/15 05:11:41] Scheduled management tasks. Next at 1434348701
+[2015/06/15 06:11:42] Scheduled management tasks. Next at 1434352302

@@ -16,7 +16,7 @@
   "toggleMenu": {
     "play": "<span class=\"blue\">В</span>оспроизвести",
     "download": "<span class=\"blue\">С</span>качать",
-    "email": "<span class=\"blue\">О</span>тправить Email",
+    "email": "<span class=\"blue\">E</span>mail",
     "publish": "<span class=\"blue\">О</span>публиковать"
   },
   "selectMenu": {

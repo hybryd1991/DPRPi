@@ -1,0 +1,10 @@
+42.168.192.in-addr.arpa. 10800 IN SOA delayplay-client.com. admin.delayplay-client.com. (
+          2015020301 ; Serial
+                  1d ; Refresh
+                  1h ; Retry
+                  1w ; Expire
+                  2h ; Negative Cache TTL
+          )
+ 
+     NS    delayplay-client.com.
+1    PTR   delayplay-client.com.

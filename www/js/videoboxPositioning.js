@@ -23,7 +23,7 @@ function videoboxPosition(){
 	var btnHeight = $('#mainButtons').height();
 	var surfHeight = scrHeight - headHeight - btnHeight;
 	var galHeight = $('#showGalleryBtn').height();
-	$('.liveimage').height(surfHeight);
+	//$('.liveimage').height(surfHeight);
 	
 	$("#mjpeg_dest").load(function(){
 		if($("#mjpeg_dest").height() != 0){
@@ -55,12 +55,12 @@ function videoboxPosition(){
 				$("#mjpeg_dest").css('height', '');
 				$("#mjpeg_dest").css('margin-top', '');
 
-				var imgH = surfHeight;
+				var imgH = surfHeight - 20;
 				var imgProp = vidH/imgH;
 				var imgW = vidW/imgProp;
 
-				$("#mjpeg_dest").css('width', imgW + 'px');
-				$("#mjpeg_dest").css('height', imgH+'px');
+				$("#mjpeg_dest").css('width', imgW);
+				$("#mjpeg_dest").css('height', imgH);
 			}
 		}
 	});
